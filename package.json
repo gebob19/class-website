@@ -1,0 +1,23 @@
+{
+  "name": "cscb20a2",
+  "version": "1.0.0",
+  "description": "Introduction to web design assignment 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gebob19/cscb20a2.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gebob19/cscb20a2/issues"
+  },
+  "homepage": "https://github.com/gebob19/cscb20a2#readme",
+  "dependencies": {
+    "express": "4.16.2",
+    "nodemon": "1.17.1"
+  }
+}
