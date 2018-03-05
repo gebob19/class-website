@@ -4,7 +4,7 @@
   "description": "Introduction to web design assignment 2",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "browser-sync Assignment2/src --server --files \"Assignment2/src/css/*.css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,8 +17,7 @@
     "url": "https://github.com/gebob19/cscb20a2/issues"
   },
   "homepage": "https://github.com/gebob19/cscb20a2#readme",
-  "dependencies": {
-    "express": "4.16.2",
-    "nodemon": "1.17.1"
+  "devDependencies": {
+    "browser-sync": "^2.23.6"
   }
 }
