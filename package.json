@@ -4,7 +4,7 @@
   "description": "Introduction to web design assignment 2",
   "main": "index.js",
   "scripts": {
-    "start": "browser-sync Assignment2/src --server --files \"Assignment2/src/css/*.css\"",
+    "start": "browser-sync Assignment2/src --server --files \"Assignment2/src/*.html\" --files \"Assignment2/src/css/*.css\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
