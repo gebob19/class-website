@@ -1,0 +1,2 @@
+As a student user, the student must be able to view and download labs as well as
+any additional code/resources after clicking on the 'labs' button.
