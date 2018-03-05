@@ -1,0 +1,2 @@
+As a student user, the student user must be able to navigate to the Piazza
+discussion board.
