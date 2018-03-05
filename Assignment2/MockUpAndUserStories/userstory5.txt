@@ -1,0 +1,2 @@
+As a student user, the student must be able to view and download assignments
+after clicking on the 'assignments' button.
