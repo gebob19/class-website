@@ -1,0 +1,2 @@
+As a student user, the student user must be able to easily find and download the
+course syllabus.
