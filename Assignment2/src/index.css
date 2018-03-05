@@ -1,0 +1,10 @@
+h1 {
+  color:white;
+}
+
+div.title {
+  font-size:75%;
+  color: white;
+  background-color: blue;
+  text-align: left;
+}
