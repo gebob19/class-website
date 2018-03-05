@@ -1,0 +1,3 @@
+As a student, the student must be able to
+see the Course's TAs and Instructors information
+when the 'Course Team' button is clicked.
