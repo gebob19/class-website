@@ -10,9 +10,30 @@
   top: 0;
 }
 
+h1 {
+  padding-top: 30px;
+  text-align: center;
+}
+
 .menu {
   position: absolute;
+  width: 100%;
+  position: absolute;
+  text-align: center;
   z-index: 1000000;
+}
+#menu ul {
+  list-style-type: none;
+}
+
+#menu li {
+  padding: 15px 0 15px 0;
+  border-bottom: #dddddd 1px solid;
+  text-align: center;
+}
+
+#menu li:hover {
+  background:blue;
 }
 
 header div.title {
