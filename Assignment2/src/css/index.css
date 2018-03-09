@@ -34,6 +34,7 @@ h1 {
 
 #menu li:hover {
   background:blue;
+  color: white;
 }
 
 header div.title {
