@@ -9,10 +9,10 @@
     <h1 class="page--title">
       {{ page.title }}
     </h1>
-
+    
     <main class="page--content">
-      {% for assignment in site.assignments %}
-        <a href="{{ assignment.url }}">{{ assignment.title }}</a>
+      {% for list in site[page.collection] %}
+        <a href="{{ list.url }}">{{ list.title }}</a>
       {% endfor %}
     </main>
 

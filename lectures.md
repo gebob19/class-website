@@ -1,4 +1,5 @@
 ---
-layout: lectures
 title: Lectures
+layout: collection-list
+collection: lectures
 ---
