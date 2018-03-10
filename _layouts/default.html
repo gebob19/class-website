@@ -11,9 +11,7 @@
     </h1>
 
     <main class="page--content">
-      {% for announcement in site.announcements reversed %}
-        {%  include announcement.html %}
-      {% endfor %}
+      {{ content }}
     </main>
 
     {% include footer.html %}
