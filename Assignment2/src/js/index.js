@@ -1,6 +1,9 @@
+var burger = document.getElementById("header--burger");
 var menu = document.getElementById("menu");
 
-function menuToggle() {
+burger.addEventListener('click', handleMenuToggle);
+
+function handleMenuToggle() {
   if (menu.style.display == "none") {
     menu.style.display = "";
   } else {

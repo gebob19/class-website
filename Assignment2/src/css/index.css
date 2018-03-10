@@ -1,49 +1,69 @@
-.hamburger {
-  position: absolute;
-  background: none;
-  line-height: 45px;
-  padding: 5px 15px 0px 15px;
-  font-size: 1.3em;
-  outline:none;
-  border:0;
-  right: 0;
-  top: 0;
+/*
+# Color Palette
+
+Medium Turquoise: #4acbc3
+Sky Blue: #91dfd9
+Dark Slate Gray: #4d4d4d
+Lavender: #ebedef
+*/
+
+html,
+body {
+  background-color: #ebedef;
+  color: #4d4d4d;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  margin: 0;
 }
 
-h1 {
-  padding-top: 30px;
+.header {
+  background: #4acbc3;
+  display: flex;
+}
+
+.header--title {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#header--burger {
+  background: #ebedef;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 5px 15px 0px 15px;
+}
+
+.page--title {
+  background: #91dfd9;
+  margin: 0;
+  padding: 30px;
   text-align: center;
 }
 
 .menu {
-  position: absolute;
-  width: 100%;
-  position: absolute;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  z-index: 1000000;
-}
-#menu ul {
-  list-style-type: none;
 }
 
-#menu li {
+.menu--item {
+  display: block;
   padding: 15px 0 15px 0;
-  border-bottom: #dddddd 1px solid;
   text-align: center;
 }
 
-#menu li:hover {
-  background:blue;
-  color: white;
+.menu--item:nth-child(even) {
+  background-color: #ffffff;
 }
 
-header div.title {
-  font-size:200%;
-  color: black;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 10%;
-  line-height: 60px;
-  text-align: left;
+.menu--item:nth-child(odd) {
+  background-color: #ebedef;
+}
+
+.menu--item:hover {
+  color: #ebedef;
+  background:#4acbc3;
 }
