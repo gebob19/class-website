@@ -16,6 +16,28 @@ body {
   margin: 0;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background: gainsboro;
+}
+
+tbody {
+  background: floralwhite;
+}
+
+tr {
+  border-bottom: 1px solid gainsboro;
+}
+
+th,
+td {
+  padding: 10px;
+}
+
 /*
 ## Page Title
 */

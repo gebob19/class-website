@@ -1,4 +1,4 @@
 ---
-layout: announcements
 title: Announcements
+layout: announcements
 ---
