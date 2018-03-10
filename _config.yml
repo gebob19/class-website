@@ -42,6 +42,8 @@ collections:
     output: false
   lectures:
     output: true
+  assignments:
+    output: true
 
 defaults:
   - scope:
@@ -53,3 +55,8 @@ defaults:
       type: lectures
     values:
       layout: lecture-single
+  - scope:
+      path: ""
+      type: assignments
+    values:
+      layout: assignment-single

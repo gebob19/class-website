@@ -11,12 +11,11 @@
     </h1>
 
     <main class="page--content">
-      {{ content }}
-
-      {% include attachments.html %}
+      {% for assignment in site.assignments %}
+        <a href="{{ assignment.url }}">{{ assignment.title }}</a>
+      {% endfor %}
     </main>
 
     {% include footer.html %}
   </body>
 </html>
-
