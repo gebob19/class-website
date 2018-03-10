@@ -1,9 +1,8 @@
 var menu = document.getElementById("menu");
-menu.style.display = "none";
 
 function menuToggle() {
   if (menu.style.display == "none") {
-    menu.style.display = "block";
+    menu.style.display = "";
   } else {
     menu.style.display = "none"; 
   }
