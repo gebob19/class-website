@@ -1,12 +1,12 @@
-var burger = document.getElementById("header--burger");
-var menu = document.getElementById("menu");
+var pageHeaderBurger = document.getElementById('page--header--burger');
+var pageMenu = document.getElementById('page--menu');
 
-burger.addEventListener('click', handleMenuToggle);
+pageHeaderBurger.addEventListener('click', handleMenuToggle);
 
 function handleMenuToggle() {
-  if (menu.style.display == "none") {
-    menu.style.display = "";
+  if (pageMenu.style.display == 'none') {
+    pageMenu.style.display = '';
   } else {
-    menu.style.display = "none"; 
+    pageMenu.style.display = 'none'; 
   }
 }

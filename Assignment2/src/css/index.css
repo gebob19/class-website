@@ -16,25 +16,9 @@ body {
   margin: 0;
 }
 
-.header {
-  background: #4acbc3;
-  display: flex;
-}
-
-.header--title {
-  flex-grow: 1;
-  font-size: 1.5rem;
-  font-weight: bold;
-  padding: 10px;
-}
-
-#header--burger {
-  background: #ebedef;
-  border: 0;
-  cursor: pointer;
-  font-size: 1.3rem;
-  padding: 5px 15px 0px 15px;
-}
+/*
+## Page Title
+*/
 
 .page--title {
   background: #91dfd9;
@@ -43,27 +27,109 @@ body {
   text-align: center;
 }
 
-.menu {
+/*
+## Page Header
+*/
+
+.page--header {
+  background: #4acbc3;
+  display: flex;
+}
+
+.page--header--title {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#page--header--burger {
+  background: #ebedef;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.3rem;
+  padding: 5px 15px 0px 15px;
+}
+
+/*
+## Page Menu
+*/
+
+.page--menu {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.menu--item {
+.page--menu--item {
   display: block;
   padding: 15px 0 15px 0;
   text-align: center;
 }
 
-.menu--item:nth-child(even) {
+.page--menu--item:nth-child(even) {
   background-color: #ffffff;
 }
 
-.menu--item:nth-child(odd) {
+.page--menu--item:nth-child(odd) {
   background-color: #ebedef;
 }
 
-.menu--item:hover {
+.page--menu--item:hover {
   color: #ebedef;
   background:#4acbc3;
+}
+
+/*
+## Page Body
+*/
+
+.page--body {
+  padding: 5px;
+  max-width: 768px;
+  margin: auto;
+}
+
+/*
+## Announcement
+*/
+
+.announcement {
+  margin: 10px;
+}
+
+.announcement--header {
+  background: gainsboro;
+  display: flex;
+  padding: 5px;
+}
+
+.announcement--heading {
+  flex-grow: 1;
+  font-size: 1.2rem;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.announcement--body {
+  background: floralwhite;
+  padding: 10px;
+}
+
+.announcement--footer {
+  background: gainsboro;
+  padding: 5px;
+}
+
+.announcement--footer--item {
+  padding: 5px;
+  margin: 0;
+}
+
+/*
+## Common
+*/
+
+.inline-icon {
+  vertical-align: bottom;
 }
