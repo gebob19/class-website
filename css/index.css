@@ -94,10 +94,10 @@ body {
 }
 
 /*
-## Page Body
+## Page Content
 */
 
-.page--body {
+.page--content {
   padding: 5px;
   max-width: 768px;
   margin: auto;
@@ -108,7 +108,7 @@ body {
 */
 
 .announcement {
-  margin: 10px;
+  margin: 20px 10px;
 }
 
 .announcement--header {
@@ -117,14 +117,14 @@ body {
   padding: 5px;
 }
 
-.announcement--heading {
+.announcement--title {
   flex-grow: 1;
   font-size: 1.2rem;
   margin: 0;
   padding: 10px 0;
 }
 
-.announcement--body {
+.announcement--content {
   background: floralwhite;
   padding: 10px;
 }
