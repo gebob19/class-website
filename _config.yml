@@ -38,4 +38,14 @@ exclude:
   - Assignment2/
 
 collections:
-  - announcements
+  announcements:
+    output: false
+  lectures:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: lectures
+    values:
+      layout: lecture-single

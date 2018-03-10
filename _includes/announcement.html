@@ -3,7 +3,7 @@
     <h2 class="announcement--title">
         {{ announcement.title }}
     </h2>
-    <img src="img/ic_announcement_4d4d4d_24px.svg" alt="Announcement" />
+    <img src="{{ '/img/ic_announcement_4d4d4d_24px.svg' | absolute_url }}" alt="Announcement" />
   </header>
   
   <div class="announcement--content">
@@ -13,13 +13,13 @@
   <footer class="announcement--footer">
     <p class="announcement--footer--item">
       <img class="inline-icon"
-        src="img/ic_person_4d4d4d_18px.svg"
+        src="{{ '/img/ic_person_4d4d4d_18px.svg' | absolute_url }}"
         alt="Posted By" />
       {{ announcement.author }}
     </p>
     <p class="announcement--footer--item">
       <img class="inline-icon"
-        src="img/ic_time_4d4d4d_18px.svg"
+        src="{{ '/img/ic_time_4d4d4d_18px.svg' | absolute_url }}"
         alt="Posted On" />
       <time>{{ announcement.date | date: '%B %d, %Y' }}</time>
     </p>

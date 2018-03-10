@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include meta.html %}
+  </head>
+  <body>
+    {% include header.html %}
+    
+    <h1 class="page--title">
+      {{ page.title }}
+    </h1>
+
+    <main class="page--content">
+      {{ content }}
+
+      <p>Attached Files:</p>
+      <ul class="attachments">
+        {% for file in page.files %}
+          <li class="attachments--item">
+            <a href="{{ file | uri_escape | absolute_url }}" target="_blank">
+              <img class="inline-icon"
+                src="{{ '/img/ic_attachment_4d4d4d_18px.svg' | absolute_url }}"
+                alt="">
+              {% assign filename = file | split: '/' | last %}
+              {{ filename }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </main>
+
+    {% include footer.html %}
+  </body>
+</html>
+

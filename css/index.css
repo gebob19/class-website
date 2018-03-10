@@ -140,6 +140,19 @@ body {
 }
 
 /*
+## Attachments
+*/
+
+.attachments {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.attachments--item {
+  margin: 15px 0;
+}
+
+/*
 ## Common
 */
 
