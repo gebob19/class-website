@@ -39,6 +39,11 @@ td {
   padding: 10px;
 }
 
+a:hover {
+  text-underline-position: below;
+  color: green; 
+}
+
 /*
 ## Page Title
 */
@@ -195,4 +200,23 @@ td {
 
 .inline-icon {
   vertical-align: bottom;
+}
+
+/*
+## Lecture Layout
+*/
+
+.lectures {
+  text-align: center;
+}
+
+.lectures--item {
+  display: block;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.lectures--item:hover {
+  background: #91dfd9;
+  color: #4d4d4d;
 }
