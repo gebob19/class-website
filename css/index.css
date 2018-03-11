@@ -45,9 +45,15 @@ td {
 
 .page--title {
   background: #91dfd9;
-  margin: 0;
+  margin-top: 44px;
   padding: 30px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .page--title {
+    margin-top: 96px;
+  }
 }
 
 /*
@@ -57,6 +63,10 @@ td {
 .page--header {
   background: #4acbc3;
   display: flex;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .page--header--title {
@@ -95,6 +105,10 @@ td {
   display: flex;
   flex-direction: column;
   text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 44px;
+  left: 0;
 }
 
 @media screen and (min-width: 768px) {
