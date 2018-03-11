@@ -2,7 +2,6 @@
 title: Course Team
 ---
 
-
 **Name:** Abbas Attarwala
 
 **Office Hours:** Mon and Fri from 11:30am to 1:15pm in IC 478
@@ -26,4 +25,3 @@ title: Course Team
 **Name:** Nagarjun Ratnesh
 
 **Office Hours:** See announcements
-
