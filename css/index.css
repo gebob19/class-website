@@ -11,7 +11,7 @@ html,
 body {
   background-color: #ebedef;
   color: #4d4d4d;
-  font-family: 'Roboto', sans-serif;
+  font-family: Verdana, Tahoma, sans-serif;
   font-size: 14px;
   margin: 0;
   padding:0;
@@ -222,6 +222,23 @@ a:active {
 
 .inline-icon {
   vertical-align: bottom;
+}
+
+/*
+## 404 Page
+*/
+
+.status-404 {
+  margin: 10px auto;
+  max-width: 600px;
+  text-align: center;
+}
+
+.status-404--heading {
+  margin: 30px 0;
+  font-size: 4em;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
 /*
