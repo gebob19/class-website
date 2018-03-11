@@ -17,28 +17,6 @@ body {
   word-wrap: break-word;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-thead {
-  background: gainsboro;
-}
-
-tbody {
-  background: floralwhite;
-}
-
-tr {
-  border-bottom: 1px solid gainsboro;
-}
-
-th,
-td {
-  padding: 10px;
-}
-
 a:hover {
   text-underline-position: below;
   color: green; 
@@ -206,17 +184,17 @@ a:hover {
 ## Lecture Layout
 */
 
-.lectures {
+.collection-list {
   text-align: center;
 }
 
-.lectures--item {
+.collection-list--item {
   display: block;
   padding: 10px;
   margin: 10px 0;
 }
 
-.lectures--item:hover {
+.collection-list--item:hover {
   background: #91dfd9;
   color: #4d4d4d;
 }
