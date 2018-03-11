@@ -13,9 +13,13 @@
     <main class="page--content">
       {{ content }}
       
-      {% for list in site[page.collection] %}
-        <a href="{{ list.url }}">{{ list.title }}</a>
-      {% endfor %}
+      <div class="collection-list">
+        {% for list in site[page.collection] %}
+          <a href="{{ list.url }}" class="collection-list--item">
+            {{ list.title }}
+          </a>
+        {% endfor %}
+      </div>
     </main>
 
     {% include footer.html %}
