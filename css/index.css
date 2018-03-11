@@ -17,9 +17,17 @@ body {
   word-wrap: break-word;
 }
 
+a {
+  text-decoration: none;
+}
+
 a:hover {
-  text-underline-position: below;
+  text-decoration: underline;
   color: green; 
+}
+
+a:active {
+  font-weight: bold;
 }
 
 /*
