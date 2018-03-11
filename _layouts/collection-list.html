@@ -11,6 +11,8 @@
     </h1>
     
     <main class="page--content">
+      {{ content }}
+      
       {% for list in site[page.collection] %}
         <a href="{{ list.url }}">{{ list.title }}</a>
       {% endfor %}

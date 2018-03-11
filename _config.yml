@@ -44,6 +44,8 @@ collections:
     output: true
   assignments:
     output: true
+  labs:
+    output: true
 
 defaults:
   - scope:
@@ -58,5 +60,10 @@ defaults:
   - scope:
       path: ""
       type: assignments
+    values:
+      layout: collection-single
+  - scope:
+      path: ""
+      type: labs
     values:
       layout: collection-single
