@@ -14,6 +14,8 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   margin: 0;
+  padding:0;
+  height:100%;
   word-wrap: break-word;
 }
 
@@ -31,19 +33,29 @@ a:active {
 }
 
 /*
+## Page
+*/
+
+.page {
+  min-height: 100%;
+  position: relative;
+}
+
+/*
 ## Page Title
 */
 
 .page--title {
   background: #91dfd9;
-  margin-top: 44px;
   padding: 30px;
+  padding-top: 74px; /* .page-header height + 30px */
+  margin: 0;
   text-align: center;
 }
 
 @media screen and (min-width: 768px) {
   .page--title {
-    margin-top: 90px;
+    padding-top: 120px; /* .page-header height + .page-menu height + 30px */
   }
 }
 
@@ -127,8 +139,27 @@ a:active {
 
 .page--content {
   padding: 5px;
+  padding-bottom: 52px; /* .page-footer height */
   max-width: 768px;
   margin: auto;
+}
+
+/*
+## Page Footer
+*/
+
+.page--footer {
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  height: 52px; /* .page-footer height */
+  background: #4acbc3;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
 }
 
 /*

@@ -4,19 +4,21 @@
     {% include meta.html %}
   </head>
   <body>
-    {% include header.html %}
-    
-    <h1 class="page--title">
-      {{ page.title }}
-    </h1>
+    <div class="page">
+      {% include header.html %}
+      
+      <h1 class="page--title">
+        {{ page.title }}
+      </h1>
 
-    <main class="page--content">
-      {% for announcement in site.announcements reversed %}
-        {%  include announcement.html %}
-      {% endfor %}
-    </main>
+      <main class="page--content">
+        {% for announcement in site.announcements reversed %}
+          {%  include announcement.html %}
+        {% endfor %}
+      </main>
 
-    {% include footer.html %}
+      {% include footer.html %}
+    </div>
   </body>
 </html>
 
