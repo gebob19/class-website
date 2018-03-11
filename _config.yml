@@ -45,6 +45,8 @@ collections:
     output: true
   labs:
     output: true
+  exams:
+    output: true
 
 defaults:
   - scope:
@@ -66,3 +68,9 @@ defaults:
       type: labs
     values:
       layout: collection-single
+  - scope:
+      path: ""
+      type: exams
+    values:
+      layout: collection-single
+
