@@ -23,4 +23,6 @@ User::insert((object) [
   'password' => 'chehabom',
   'role' => 'student'
 ]);
-// User::update(['role'], 's', ['instructor'], ['username'], 's', ['chehabom']);
+User::updateByUsername('chehabom', 's', [
+  'role' => 'instructor',
+]);
