@@ -25,7 +25,7 @@ class User implements Model {
     ]);
   }
 
-  public static function getAllByRole($role) {
+  public static function selectAllByRole($role) {
     return query("SELECT
       `username`,
       `password`,
