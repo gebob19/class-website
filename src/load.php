@@ -8,6 +8,7 @@ require_once ABSPATH . INCLUDES . 'function-now.php';
 require_once ABSPATH . INCLUDES . 'function-query.php';
 require_once ABSPATH . INCLUDES . 'interface-model.php';
 require_once ABSPATH . INCLUDES . 'class-model-user.php';
+require_once ABSPATH . INCLUDES . 'class-model-gradable.php';
 require_once ABSPATH . INCLUDES . 'component-meta.php';
 require_once ABSPATH . INCLUDES . 'component-header.php';
 require_once ABSPATH . INCLUDES . 'component-footer.php';
@@ -18,6 +19,7 @@ require_once ABSPATH . INCLUDES . 'layout-collection-list.php';
 require_once ABSPATH . INCLUDES . 'layout-collection-single.php';
 require_once ABSPATH . INCLUDES . 'layout-announcements.php';
 User::create_table();
+Gradable::create_table();
 User::insert((object) [
   'username' => 'chehabom',
   'password' => 'chehabom',
