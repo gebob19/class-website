@@ -6,8 +6,6 @@ function debug($data) {
 require_once ABSPATH . INCLUDES . 'global-db.php';
 require_once ABSPATH . INCLUDES . 'function-now.php';
 require_once ABSPATH . INCLUDES . 'function-query.php';
-require_once ABSPATH . INCLUDES . 'function-query-insert.php';
-require_once ABSPATH . INCLUDES . 'function-query-update.php';
 require_once ABSPATH . INCLUDES . 'interface-model.php';
 require_once ABSPATH . INCLUDES . 'class-model-user.php';
 require_once ABSPATH . INCLUDES . 'component-meta.php';
