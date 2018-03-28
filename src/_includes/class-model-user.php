@@ -12,27 +12,26 @@ class User implements Model {
   }
   
   public static function selectByUsername($username) {
-    return query("SELECT
-      `username`,
+    return query("SELECT `username`,
       `password`,
       `role`,
       `created_at`,
       `updated_at`
-      FROM Users
-      WHERE username = ?", [
+      FROM `User`
+      WHERE `username` = ?", [
       's',
       $username
     ]);
   }
 
   public static function selectAllByRole($role) {
-    return query("SELECT
-      `username`,
+    return query("SELECT `username`,
       `password`,
+      `role`,
       `created_at`,
-      `updated_at`,
-      FROM Users
-      WHERE role = ?", [
+      `updated_at`
+      FROM `User`
+      WHERE `role` = ?", [
         's',
         $role
     ]);
@@ -87,12 +86,9 @@ class User implements Model {
   }
 
   public static function deleteByUsername($username) {
-    return query("
-      DELETE FROM `Users`
-      WHERE  `username` = ?", [
-        's',
-        $username
-      ]);
+    return query("DELETE FROM `User` WHERE `username` = ?", [
+      's',
+      $username
+    ]);
   }
-
 }

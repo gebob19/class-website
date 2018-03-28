@@ -35,7 +35,7 @@ User::updateByUsername('chehabom', 's', [
 ]);
 
 debug(User::selectByUsername('gebotysb'));
-debug(User::selectByRole('ta'));
+debug(User::selectAllByRole('ta'));
 
 User::deleteByUsername('gebotysb');
 
