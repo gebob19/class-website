@@ -38,7 +38,28 @@ class User implements Model {
     ]);
   }
   
-  public static function update($set_columns, $set_types, $set_values, $where_columns, $where_types, $where_values) {
+  public static function updateByUsername($username, $types, $set) {
+    $now = now();
+    
+    $stmt_set = [];
+    $stmt_values = [];
+    foreach ($set as $column => $value) {
+      $stmt_set[] = "`$column` = ?";
+      $stmt_values[] = $value;
+    }
+
+    $types .= 's';
+    $stmt_set[] = "`updated_at` = ?";
+    $stmt_values[] = $now;
+
+    $stmt_set = implode(', ', $stmt_set);
+    $types .= 's';
+    
+    return query("UPDATE `User` SET $stmt_set WHERE `username` = ?", array_merge(
+      [$types],
+      $stmt_values,
+      [$username]
+    ));
   }
 
   public static function delete($where_columns, $where_types, $where_values) {
