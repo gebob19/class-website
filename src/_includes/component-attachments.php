@@ -1,8 +1,8 @@
-<?php if (isset($page->attachments)): ?>
+<?php function component_attachments($attachments = []) { ?>
   <p>Attached Files:</p>
 
   <ul class="attachments">
-    <?php foreach ($page->attachments as $attachment): ?>
+    <?php foreach ($attachments as $attachment): ?>
       <li class="attachments--item">
         <a href="<?=urlencode($attachment)?>" target="_blank">
           <img class="inline-icon"
@@ -13,4 +13,4 @@
       </li>
     <?php endforeach; ?>
   </ul>
-<?php endif; ?>
+<?php } ?>
