@@ -11,7 +11,31 @@ class User implements Model {
     )");
   }
   
-  public static function select($where_columns, $where_types, $where_values) {
+  public static function selectByUsername($username) {
+    return query("SELECT
+      `username`,
+      `password`,
+      `role`,
+      `created_at`,
+      `updated_at`
+      FROM Users
+      WHERE username = ?", [
+      's',
+      $username
+    ]);
+  }
+
+  public static function getAllByRole($role) {
+    return query("SELECT
+      `username`,
+      `password`,
+      `created_at`,
+      `updated_at`,
+      FROM Users
+      WHERE role = ?", [
+        's',
+        $role
+    ]);
   }
   
   public static function insert($data) {
