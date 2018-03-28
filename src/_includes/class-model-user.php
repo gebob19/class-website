@@ -16,15 +16,25 @@ class User implements Model {
   
   public static function insert($data) {
     $now = now();
-    return query_insert('User', (object) [
-      'values_types' => 'sssss',
-      'values' => [
-        `username` => $data->username,
-        `password` => hash('sha256', $data->password),
-        `role` => $data->role,
-        `created_at` => $now,
-        `updated_at` => $now
-      ]
+    return query("INSERT INTO `User` (
+      `username`,
+      `password`,
+      `role`,
+      `created_at`,
+      `updated_at`
+    ) VALUES (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?
+    )", [
+      'sssss',
+      $data->username,
+      hash('sha256', $data->password),
+      $data->role,
+      $now,
+      $now
     ]);
   }
   
