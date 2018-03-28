@@ -86,6 +86,13 @@ class User implements Model {
     ));
   }
 
-  public static function delete($where_columns, $where_types, $where_values) {
+  public static function deleteByUsername($username) {
+    return query("
+      DELETE FROM `Users`
+      WHERE  `username` = ?", [
+        's',
+        $username
+      ]);
   }
+
 }

@@ -23,6 +23,17 @@ User::insert((object) [
   'password' => 'chehabom',
   'role' => 'student'
 ]);
-User::updateByUsername('chehabom', 's', [
-  'role' => 'instructor',
+User::insert((object) [
+  'username' => 'gebotysb',
+  'password' => 'gebotysb',
+  'role' => 'instructor'
 ]);
+User::updateByUsername('chehabom', 's', [
+  'role' => 'ta',
+]);
+
+debug(User::selectByUsername('gebotysb'));
+debug(User::selectByRole('ta'));
+
+User::deleteByUsername('gebotysb');
+
