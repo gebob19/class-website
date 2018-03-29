@@ -31,7 +31,7 @@ class Announcement implements Model {
       `updated_at`,
       FROM `Announcement`
       WHERE `id` = ?", [
-        's',
+        'i',
         $id
       ]);
   }
