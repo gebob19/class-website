@@ -41,3 +41,16 @@ debug(User::selectByUsername('gebotysb'));
 debug(User::selectAllByRole('ta'));
 User::deleteByUsername('gebotysb');
 
+Gradable::insert((object) [
+  'id' => 'a1',
+  'weight' => 0.25,
+]);
+Gradable::insert((object) [
+  'id' => 'a2',
+  'weight' => 0.25,
+]);
+Gradable::updateById('a2', 'd', (object) [
+  'weight' => 0.20
+]);
+debug(Gradable::selectById('a1'));
+debug(Gradable::selectAll());
