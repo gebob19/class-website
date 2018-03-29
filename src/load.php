@@ -24,6 +24,7 @@ User::create_table();
 Gradable::create_table();
 Grade::create_table();
 Feedback::create_table();
+Announcement::create_table();
 
 User::insert((object) [
   'username' => 'chehabom',
@@ -61,3 +62,12 @@ Feedback::insert((object) [
 ]);
 
 debug(Feedback::selectAll());
+
+Announcement::insert((object) [
+  'title' => 'New Instructor',
+  'content' => 'Brennan Gebotys will be your new prof, abbas has stepped down',
+  'author_username' => 'chehabom',
+]);
+
+debug(Announcement::selectAll());
+debug(Announcement::selectById(1));
