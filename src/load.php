@@ -23,6 +23,7 @@ require_once ABSPATH . INCLUDES . 'layout-announcements.php';
 User::create_table();
 Gradable::create_table();
 Grade::create_table();
+Feedback::create_table();
 
 User::insert((object) [
   'username' => 'chehabom',
@@ -54,3 +55,9 @@ Gradable::updateById('a2', 'd', (object) [
 ]);
 debug(Gradable::selectById('a1'));
 debug(Gradable::selectAll());
+
+Feedback::insert((object) [
+  'message'=>'abbas steals from w3schools'
+]);
+
+debug(Feedback::selectAll());
