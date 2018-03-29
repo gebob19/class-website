@@ -15,6 +15,36 @@ class Grade implements Model {
     )");
   }
 
+  public static function selectAllGradesOfStudent($student_username) {
+    return query("SELECT `student_username`,
+      `gradable_name`,
+      `mark`,
+      `remark`,
+      `remark_message`,
+      `remark_status`,
+      `created_at`,
+      `updated_at` WHERE `student_username` = ?
+      ", [
+      's',
+      $student_username
+    ]);
+  }
+
+  public static function selectAllGradesOfGradable($gradable_name) {
+    return query("SELECT `student_username`,
+        `gradable_name`,
+        `mark`,
+        `remark`,
+        `remark_message`,
+        `remark_status`,
+        `created_at`,
+        `updated_at` WHERE `gradable_name` = ?
+        ", [
+        's',
+        $gradable_name
+      ]);
+  }
+
   public static function selectByStudentUsername($student_username) {
     return query("SELECT `student_username`,
       `gradable_name`,
