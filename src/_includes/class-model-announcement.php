@@ -12,4 +12,53 @@ class Announcement implements Model {
       FOREIGN KEY ('author_username') REFERENCES User(`username`)
     )");
   }
+
+  public static function selectAll() {
+    return query("SELECT `id`,
+    `title`,
+    `content`,
+    `author_username`,
+    `created_at`,
+    `updated_at`,
+    FROM `Announcement`");
+  }
+
+  public static function selectById($id) {
+    return query("SELECT `title`,
+      `content`,
+      `author_username`,
+      `created_at`,
+      `updated_at`,
+      FROM `Announcement`
+      WHERE `id` = ?", [
+        's',
+        $id
+      ]);
+  }
+
+  public static function insert($data) {
+    $now = now();
+    return query("INSERT INTO `Announcement` (
+      `title`,
+      `content`,
+      `author_username`,
+      `created_at`,
+      `updated_at`
+      ) VALUES (
+        ?,
+        ?,
+        ?,
+        ?,
+        ?
+      )", [
+        'sssss',
+        $data->title,
+        $data->content,
+        $data->author_username,
+        $now,
+        $now
+      ]);
+  }
+
+
 }
