@@ -9,7 +9,7 @@ class Announcement implements Model {
       `created_at` datetime NOT NULL,
       `updated_at` datetime NOT NULL,
       PRIMARY KEY (`id`),
-      FOREIGN KEY ('author_username') REFERENCES User(`username`)
+      FOREIGN KEY (`author_username`) REFERENCES User(`username`)
     )");
   }
 
