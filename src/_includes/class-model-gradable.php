@@ -2,38 +2,38 @@
 class Gradable implements Model {
   public static function create_table() {
     query("CREATE TABLE IF NOT EXISTS `Gradable` (
-      `id` varchar(255) NOT NULL UNIQUE,
+      `name` varchar(255) NOT NULL UNIQUE,
       `weight` double precision NOT NULL,
       `created_at` datetime not null,
       `updated_at` datetime not null,
-      PRIMARY KEY (id)
+      PRIMARY KEY (name)
     )");
   }
   
-  public static function selectAll() {
-    return query("SELECT `id`,
+  public static function select() {
+    return query("SELECT `name`,
       `weight`,
       `created_at`,
       `updated_at`
       FROM `Gradable`");
   }
   
-  public static function selectById($id) {
-    return query("SELECT `id`,
+  public static function selectByName($name) {
+    return query("SELECT `name`,
       `weight`,
       `created_at`,
       `updated_at`
       FROM `Gradable`
-      WHERE `id` = ?", [
+      WHERE `name` = ?", [
       's',
-      $id
+      $name
     ]);
   }
 
   public static function insert($data) {
     $now = now();
     return query("INSERT INTO `Gradable` (
-      `id`,
+      `name`,
       `weight`,
       `created_at`,
       `updated_at`
@@ -44,14 +44,14 @@ class Gradable implements Model {
       ?
     )", [
       'sdss',
-      $data->id,
+      $data->name,
       $data->weight,
       $now,
       $now
     ]);
   }
   
-  public static function updateById($id, $types, $set) {
+  public static function updateByName($name, $types, $set) {
     $now = now();
     
     $stmt_set = [];
@@ -68,10 +68,10 @@ class Gradable implements Model {
     $stmt_set = implode(', ', $stmt_set);
     $types .= 's';
     
-    return query("UPDATE `Gradable` SET $stmt_set WHERE `id` = ?", array_merge(
+    return query("UPDATE `Gradable` SET $stmt_set WHERE `name` = ?", array_merge(
       [$types],
       $stmt_values,
-      [$id]
+      [$name]
     ));
   }
 }

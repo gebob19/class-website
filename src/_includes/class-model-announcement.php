@@ -13,13 +13,13 @@ class Announcement implements Model {
     )");
   }
 
-  public static function selectAll() {
+  public static function select() {
     return query("SELECT `id`,
     `title`,
     `content`,
     `author_username`,
     `created_at`,
-    `updated_at`,
+    `updated_at`
     FROM `Announcement`");
   }
 
@@ -28,7 +28,7 @@ class Announcement implements Model {
       `content`,
       `author_username`,
       `created_at`,
-      `updated_at`,
+      `updated_at`
       FROM `Announcement`
       WHERE `id` = ?", [
         'i',

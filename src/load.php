@@ -55,7 +55,7 @@ debug('User::selectAllByRole', User::selectAllByRole('ta'));
 debug('User::deleteByUsername', User::deleteByUsername('gebotysb'));
 try {
   debug('Gradable::insert', Gradable::insert((object) [
-    'id' => 'a1',
+    'name' => 'a1',
     'weight' => 0.25,
   ]));
 } catch (DatabaseException $err) {
@@ -63,32 +63,41 @@ try {
 }
 try {
   debug('Gradable::insert', Gradable::insert((object) [
-    'id' => 'a2',
+    'name' => 'a2',
     'weight' => 0.25,
   ]));
 } catch (DatabaseException $err) {
   debug('Gradable::insert', $err->getMessage());
 }
-debug('Gradable::updateById', Gradable::updateById('a2', 'd', (object) [
+debug('Gradable::updateByName', Gradable::updateByName('a2', 'd', (object) [
   'weight' => 0.20
 ]));
-debug('Gradable::selectById', Gradable::selectById('a1'));
-debug('Gradable::selectAll', Gradable::selectAll());
-debug('Grade::insert', Grade::insert((object) [
-  'student_username' => 'chehabom',
-  'gradable_id' => 'a1',
-  'grade' => 0.85,
-  'remark_status' => 'not-requested',
-  'remark_message' => NULL,
-]));
-debug('Feedback::insert', Feedback::insert((object) [
-  'message'=>'abbas steals from w3schools'
-]));
-debug('Feedback::selectAll', Feedback::selectAll());
+debug('Gradable::selectByName', Gradable::selectByName('a1'));
+debug('Gradable::select', Gradable::select());
+try {
+  debug('Grade::insert', Grade::insert((object) [
+    'student_username' => 'chehabom',
+    'gradable_name' => 'a1',
+    'grade' => 0.85,
+    'remark_status' => 'not-requested',
+    'remark_message' => NULL,
+  ]));
+} catch (DatabaseException $err) {
+  debug('Grade::insert', $err->getMessage());
+}
+try {
+  debug('Feedback::insert', Feedback::insert((object) [
+    'instructor_username' => 'chehabom',
+    'message'=>'abbas steals from w3schools'
+  ]));
+} catch (DatabaseException $err) {
+  debug('Grade::insert', $err->getMessage());
+}
+debug('Feedback::select', Feedback::select());
 debug('Announcement::insert', Announcement::insert((object) [
   'title' => 'New Instructor',
   'content' => 'Brennan Gebotys will be your new prof, abbas has stepped down',
   'author_username' => 'chehabom',
 ]));
-debug('Announcement::selectAll', Announcement::selectAll());
+debug('Announcement::select', Announcement::select());
 debug('Announcement::selectById', Announcement::selectById(1));
