@@ -15,4 +15,34 @@ class Grade implements Model {
       foreign key (`gradable_name`) references `Gradable` (`id`)
     )");
   }
+
+  public static function selectAllGradesOfStudent($student_username) {
+    return query("SELECT `student_username`,
+      `gradable_name`,
+      `mark`,
+      `remark`,
+      `remark_message`,
+      `remark_status`,
+      `created_at`,
+      `updated_at` WHERE `student_username` = ?
+      ", [
+      's',
+      $student_username
+    ]);
+  }
+
+  public static function selectAllGradesOfGradable($gradable_name) {
+    return query("SELECT `student_username`,
+        `gradable_name`,
+        `mark`,
+        `remark`,
+        `remark_message`,
+        `remark_status`,
+        `created_at`,
+        `updated_at` WHERE `gradable_name` = ?
+        ", [
+        's',
+        $gradable_name
+      ]);
+  }
 }
