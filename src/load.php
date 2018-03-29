@@ -51,7 +51,7 @@ debug('User::updateByUsername', User::updateByUsername('chehabom', 's', [
   'role' => 'ta',
 ]));
 debug('User::selectByUsername', User::selectByUsername('gebotysb'));
-debug('User::selectAllByRole', User::selectAllByRole('ta'));
+debug('User::selectByRole', User::selectByRole('ta'));
 debug('User::deleteByUsername', User::deleteByUsername('gebotysb'));
 try {
   debug('Gradable::insert', Gradable::insert((object) [
@@ -82,16 +82,30 @@ try {
     'remark_status' => 'not-requested',
     'remark_message' => NULL,
   ]));
+  debug('Grade::insert', Grade::insert((object) [
+    'student_username' => 'chehabom',
+    'gradable_name' => 'a2',
+    'grade' => 0.8,
+    'remark_status' => 'not-requested',
+    'remark_message' => NULL,
+  ]));
 } catch (DatabaseException $err) {
   debug('Grade::insert', $err->getMessage());
 }
+debug('Grade::updateByStudentUsernameAndGradableName',
+  Grade::updateByStudentUsernameAndGradableName('chehabom', 'a1', 'd', (object) [
+    'grade' => 0.2
+  ]));
+debug('Grade::selectByStudentUsername', Grade::selectByStudentUsername('chehabom'));
+debug('Grade::selectByGradableName', Grade::selectByGradableName('a1'));
+debug('Gradable::deleteByName', Gradable::deleteByName('a1'));
 try {
   debug('Feedback::insert', Feedback::insert((object) [
     'instructor_username' => 'chehabom',
     'message'=>'abbas steals from w3schools'
   ]));
 } catch (DatabaseException $err) {
-  debug('Grade::insert', $err->getMessage());
+  debug('Feedback::insert', $err->getMessage());
 }
 debug('Feedback::select', Feedback::select());
 debug('Announcement::insert', Announcement::insert((object) [

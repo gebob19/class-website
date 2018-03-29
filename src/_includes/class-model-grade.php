@@ -4,7 +4,7 @@ class Grade implements Model {
     query("CREATE TABLE IF NOT EXISTS `Grade` (
       `student_username` varchar(255) NOT NULL,
       `gradable_name` varchar(255) NOT NULL,
-      `grade` numeric NOT NULL,
+      `grade` double precision NOT NULL,
       `remark_status` ENUM('not-requested', 'requested', 'approved', 'remarked', 'declined') DEFAULT 'not-requested',
       `remark_message` text NULL,
       `created_at` datetime NOT NULL,
@@ -15,41 +15,10 @@ class Grade implements Model {
     )");
   }
 
-  public static function selectAllGradesOfStudent($student_username) {
-    return query("SELECT `student_username`,
-      `gradable_name`,
-      `mark`,
-      `remark`,
-      `remark_message`,
-      `remark_status`,
-      `created_at`,
-      `updated_at` WHERE `student_username` = ?
-      ", [
-      's',
-      $student_username
-    ]);
-  }
-
-  public static function selectAllGradesOfGradable($gradable_name) {
-    return query("SELECT `student_username`,
-        `gradable_name`,
-        `mark`,
-        `remark`,
-        `remark_message`,
-        `remark_status`,
-        `created_at`,
-        `updated_at` WHERE `gradable_name` = ?
-        ", [
-        's',
-        $gradable_name
-      ]);
-  }
-
   public static function selectByStudentUsername($student_username) {
     return query("SELECT `student_username`,
       `gradable_name`,
-      `mark`,
-      `remark`,
+      `grade`,
       `remark_message`,
       `remark_status`,
       `created_at`,
@@ -103,6 +72,37 @@ class Grade implements Model {
       $data->remark_message,
       $now,
       $now
+    ]);
+  }
+  
+  public static function updateByStudentUsernameAndGradableName($student_username, $gradable_name, $types, $set) {
+    $now = now();
+    
+    $stmt_set = [];
+    $stmt_values = [];
+    foreach ($set as $column => $value) {
+      $stmt_set[] = "`$column` = ?";
+      $stmt_values[] = $value;
+    }
+
+    $types .= 's';
+    $stmt_set[] = "`updated_at` = ?";
+    $stmt_values[] = $now;
+
+    $stmt_set = implode(', ', $stmt_set);
+    $types .= 'ss';
+    
+    return query("UPDATE `Grade` SET $stmt_set WHERE `student_username` = ? AND `gradable_name` = ?", array_merge(
+      [$types],
+      $stmt_values,
+      [$student_username, $gradable_name]
+    ));
+  }
+  
+  public static function deleteByGradableName($gradable_name) {
+    return query("DELETE FROM `Grade` WHERE `gradable_name` = ?", [
+      's',
+      $gradable_name
     ]);
   }
 }

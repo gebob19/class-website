@@ -74,4 +74,12 @@ class Gradable implements Model {
       [$name]
     ));
   }
+
+  public static function deleteByName($name) {
+    Grade::deleteByGradableName($name);
+    return query("DELETE FROM `Gradable` WHERE `name` = ?", [
+      's',
+      $name
+    ]);
+  }
 }
