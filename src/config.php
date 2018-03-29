@@ -5,4 +5,7 @@ define('DB_PASSWORD', '');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', 3306);
 define('TIMEZONE', 'America/Toronto');
+$site = (object) [
+  'title' => 'CSCB20'
+];
 require_once 'settings.php';

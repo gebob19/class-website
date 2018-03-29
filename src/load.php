@@ -20,7 +20,6 @@ require_once ABSPATH . INCLUDES . 'component-attachments.php';
 require_once ABSPATH . INCLUDES . 'layout-default.php';
 require_once ABSPATH . INCLUDES . 'layout-collection-list.php';
 require_once ABSPATH . INCLUDES . 'layout-collection-single.php';
-require_once ABSPATH . INCLUDES . 'layout-announcements.php';
 
 User::create_table();
 Gradable::create_table();

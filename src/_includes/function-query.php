@@ -29,7 +29,7 @@ function query($query, $params = []) {
       $fields = [];
       $row = [];
       while ($field = $meta->fetch_field()) {
-        $fields[] = &$row[$field->name]; 
+        $fields[$field->name] = &$row[$field->name]; 
       }
 
       call_user_func_array([$stmt, 'bind_result'], array_references($fields));
@@ -40,7 +40,7 @@ function query($query, $params = []) {
         foreach ($fields as $field => $val) {
           $c[$field] = $val;
         }
-        $result[] = $c;
+        $result[] = (object) $c;
       }
       break;
       
