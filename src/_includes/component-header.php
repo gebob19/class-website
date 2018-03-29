@@ -11,7 +11,7 @@
   </header>
 
   <nav id="page--menu">
-    <a class="page--menu--item" href="/index.html">
+    <a class="page--menu--item" href="/index.php">
       Announcements
     </a>
     <a class="page--menu--item" href="/assets/syllabus.pdf"

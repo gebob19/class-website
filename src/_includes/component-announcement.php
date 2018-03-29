@@ -16,13 +16,13 @@
         <img class="inline-icon"
           src="/img/ic_person_4d4d4d_18px.svg"
           alt="Posted By" />
-        <?=$announcement->author?>
+        <?=$announcement->author_username?>
       </p>
       <p class="announcement--footer--item">
         <img class="inline-icon"
           src="/img/ic_time_4d4d4d_18px.svg"
           alt="Posted On" />
-        <time><?=$announcement->date?></time>
+        <time><?=$announcement->created_at?></time>
       </p>
     </footer>
   </section>
