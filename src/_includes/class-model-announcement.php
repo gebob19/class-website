@@ -59,6 +59,4 @@ class Announcement implements Model {
         $now
       ]);
   }
-
-
 }
