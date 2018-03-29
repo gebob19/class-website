@@ -18,6 +18,7 @@ require_once ABSPATH . INCLUDES . 'class-model-gradable.php';
 require_once ABSPATH . INCLUDES . 'class-model-grade.php';
 require_once ABSPATH . INCLUDES . 'class-model-feedback.php';
 require_once ABSPATH . INCLUDES . 'class-model-announcement.php';
+require_once ABSPATH . INCLUDES . 'class-model-page.php';
 require_once ABSPATH . INCLUDES . 'component-meta.php';
 require_once ABSPATH . INCLUDES . 'component-header.php';
 require_once ABSPATH . INCLUDES . 'component-footer.php';
@@ -33,6 +34,7 @@ debug('Gradable::create_table', Gradable::create_table());
 debug('Grade::create_table', Grade::create_table());
 debug('Feedback::create_table', Feedback::create_table());
 debug('Announcement::create_table', Announcement::create_table());
+debug('Page::create_table', Page::create_table());
 try {
   debug('User::insert', User::insert((object) [
     'username' => 'chehabom',
@@ -115,3 +117,19 @@ debug('Announcement::insert', Announcement::insert((object) [
 ]));
 debug('Announcement::select', Announcement::select());
 debug('Announcement::selectById', Announcement::selectById(1));
+
+try {
+  debug('Page::insert', Page::insert((object) [
+    'path' => '/a1',
+    'title' => 'Assignment 1',
+    'content' => 'Please dont forget to submit your src folder',
+  ]));
+} catch (DatabaseException $err) {
+  debug('Page::insert', $err->getMessage());
+}
+debug('Page::select', Page::select());
+debug('Page::updateByPath', Page::updateByPath('/a1', 's', [
+  'content' => 'Due date is 5pm on Sunday.',
+]));
+debug('Page::selectByPath', Page::selectByPath('/a1'));
+debug('Page::deleteByPath', Page::deleteByPath('/a1'));
