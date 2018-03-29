@@ -11,7 +11,7 @@ function query($query, $params = []) {
   global $db;
   
   if (($stmt = $db->prepare($query)) == FALSE) {
-    return NULL;
+    throw new DatabaseException($db->error);
   }
   
   if (count($params) >= 2) {
@@ -19,7 +19,7 @@ function query($query, $params = []) {
   }
     
   if ($stmt->execute() == FALSE) {
-    return NULL;
+    throw new DatabaseException($stmt->error);
   }
 
   $type = strtoupper(explode(' ', $query)[0]);
