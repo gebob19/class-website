@@ -92,3 +92,4 @@ class User implements Model {
     ]);
   }
 }
+?>
