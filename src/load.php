@@ -28,3 +28,8 @@ Feedback::create_table();
 Announcement::create_table();
 Page::create_table();
 Attachment::create_table();
+
+if (!isset($_SESSION) && $_SERVER['REQUEST_URI'] != '/login.php') {
+  header("Location: /login.php");
+  die();
+}

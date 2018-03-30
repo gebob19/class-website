@@ -54,7 +54,7 @@ class User implements Model {
     )", [
       'sssss',
       $data->username,
-      hash('sha256', $data->password),
+      User::hashpassword($data->password),
       $data->role,
       $now,
       $now
@@ -90,6 +90,10 @@ class User implements Model {
       's',
       $username
     ]);
+  }
+
+  public static function hashpassword($password) {
+    return hash('sha256', $password);
   }
 }
 ?>
