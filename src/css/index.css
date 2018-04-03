@@ -14,8 +14,8 @@ body {
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 14px;
   margin: 0;
-  padding:0;
-  height:100%;
+  padding: 0;
+  height: 100%;
   word-wrap: break-word;
 }
 
@@ -30,6 +30,65 @@ a:hover {
 
 a:active {
   font-weight: bold;
+}
+
+form {
+  width: 320px;
+  margin: auto;
+  padding: 5em 0;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 4px;
+  width: 320px;
+  margin: 0;
+  margin-bottom: 1.125em;
+  font-size: 1rem;
+  border: 1px solid #4d4d4d;
+}
+
+input[type="text"]:valid,
+input[type="password"]:valid {
+  background: #8f8;
+}
+
+button,
+input[type="submit"],
+input[type="button"] {
+  border: 1px solid #4d4d4d;
+  border-radius: 2px;
+  min-width: 120px;
+  padding: 2px 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus,
+button:active,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+input[type="submit"]:active,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="button"]:active {
+  background: #eee;
+  border-bottom-width: 2px;
+}
+
+button:focus,
+button:active,
+input[type="submit"]:focus,
+input[type="submit"]:active,
+input[type="button"]:focus,
+input[type="button"]:active {
+  background: #ddd;
 }
 
 /*
