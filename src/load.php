@@ -1,5 +1,10 @@
 <?php
 require_once ABSPATH . INCLUDES . 'function-debug.php';
+require_once ABSPATH . INCLUDES . 'function-print-error-message.php';
+require_once ABSPATH . INCLUDES . 'function-is-logged-in.php';
+require_once ABSPATH . INCLUDES . 'function-has-page-permission.php';
+require_once ABSPATH . INCLUDES . 'function-is-page.php';
+require_once ABSPATH . INCLUDES . 'function-page-redirect.php';
 require_once ABSPATH . INCLUDES . 'global-db.php';
 require_once ABSPATH . INCLUDES . 'class-exception-database.php';
 require_once ABSPATH . INCLUDES . 'function-now.php';
@@ -29,7 +34,10 @@ Announcement::create_table();
 Page::create_table();
 Attachment::create_table();
 
-if (!isset($_SESSION) && $_SERVER['REQUEST_URI'] != '/login.php') {
-  header("Location: /login.php");
-  die();
+session_start();
+
+if (is_logged_in() && !has_page_permission($_SESSION['role'])) {
+  page_redirect("/index.php") && die();
+} else if (!is_logged_in() && !has_page_permission('_public')) {
+  page_redirect("/login.php") && die();
 }

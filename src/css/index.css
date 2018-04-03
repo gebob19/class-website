@@ -91,6 +91,10 @@ input[type="button"]:active {
   background: #ddd;
 }
 
+.text-error {
+  color: #f66;
+}
+
 /*
 ## Page
 */

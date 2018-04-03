@@ -1,12 +1,13 @@
 <?php
-  require_once 'config.php';
+require_once 'config.php';
 
-  if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+switch ($_SERVER['REQUEST_METHOD']) {
+  case 'GET':
     $page = (object) [
       'title' => 'Login',
     ];
-    function component_content() {
-      ?>
+
+    function component_content() { ?>
       <form action="login.php" method="POST">
         <label>
           Username
@@ -34,27 +35,38 @@
 
         <input type="submit"
           value="Login" />
+
+        <?php if (isset($_GET['error'])): ?>
+        <p class="text-error">
+          <?= print_error_message($_GET['error']); ?>
+        </p>
+        <?php endif; ?>
       </form>
       <?php
     }
+
     layout_default();
-  } else {
+    exit();
+
+  case 'POST':
     $username = $_POST["username"];
     $password = $_POST["password"];
     $user_data = User::selectByUsername($username);
+    
     if (count($user_data) == 0) {
-      echo 'User does not exist';
+      header("Location: /login.php?error=USER_NOT_FOUND");
       die();
     }
+
     $user = $user_data[0];
     if (User::hashpassword($password) != $user->password) {
-      echo 'Incorrect password';
+      header("Location: /login.php?error=PASSWORD_INCORRECT");
       die();
     }
+
     session_start();
     header("Location: /index.php");
     $_SESSION['username'] = $user->username;
-    die();
-  }
-
-
+    $_SESSION['role'] = $user->role;
+    exit();
+}
