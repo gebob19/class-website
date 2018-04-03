@@ -24,7 +24,7 @@
       <a class="page--menu--item" href="/course-team.php">
         Course Team
       </a>
-      <a class="page--menu--item" href="/calendar.html">
+      <a class="page--menu--item" href="/calendar.php">
         Calendar
       </a>
       <a class="page--menu--item" href="/lectures.html">
