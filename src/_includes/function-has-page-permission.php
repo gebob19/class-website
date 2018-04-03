@@ -4,10 +4,12 @@ function has_page_permission($role) {
   $role_permissions = [
     '_public' => [
       '/login.php',
+      '/404.php',
       '/register.php',
     ],
     'student' => [
       '/index.php',
+      '/404.php',
       '/logout.php',
       '/course-team.php',
       '/calendar.php',
@@ -18,6 +20,7 @@ function has_page_permission($role) {
     ],
     'ta' => [
       '/index.php',
+      '/404.php',
       '/logout.php',
       '/course-team.php',
       '/calendar.php',
@@ -28,6 +31,7 @@ function has_page_permission($role) {
     ],
     'instructor' => [
       '/index.php',
+      '/404.php',
       '/logout.php',
       '/course-team.php',
       '/calendar.php',
