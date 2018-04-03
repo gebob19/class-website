@@ -33,7 +33,7 @@
       <a class="page--menu--item" href="/labs.php">
         Labs
       </a>
-      <a class="page--menu--item" href="/assignments.html">
+      <a class="page--menu--item" href="/assignments.php">
         Assignments
       </a>
       <a class="page--menu--item" href="/exams.html">

@@ -13,6 +13,7 @@ function has_page_permission($role) {
       '/calendar.php',
       '/lectures.php',
       '/labs.php',
+      '/assignments.php',
     ],
     'ta' => [
       '/index.php',
@@ -21,6 +22,7 @@ function has_page_permission($role) {
       '/calendar.php',
       '/lectures.php',
       '/labs.php',
+      '/assignments.php',
     ],
     'instructor' => [
       '/index.php',
@@ -29,6 +31,7 @@ function has_page_permission($role) {
       '/calendar.php',
       '/lectures.php',
       '/labs.php',
+      '/assignments.php',
     ],
   ];
   return in_array($page, $role_permissions[$role]);
