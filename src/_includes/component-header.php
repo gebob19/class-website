@@ -27,7 +27,7 @@
       <a class="page--menu--item" href="/calendar.php">
         Calendar
       </a>
-      <a class="page--menu--item" href="/lectures.html">
+      <a class="page--menu--item" href="/lectures.php">
         Lectures
       </a>
       <a class="page--menu--item" href="/labs.html">

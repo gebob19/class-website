@@ -11,18 +11,21 @@ function has_page_permission($role) {
       '/logout.php',
       '/course-team.php',
       '/calendar.php',
+      '/lectures.php',
     ],
     'ta' => [
       '/index.php',
       '/logout.php',
       '/course-team.php',
       '/calendar.php',
+      '/lectures.php',
     ],
     'instructor' => [
       '/index.php',
       '/logout.php',
       '/course-team.php',
       '/calendar.php',
+      '/lectures.php',
     ],
   ];
   return in_array($page, $role_permissions[$role]);
