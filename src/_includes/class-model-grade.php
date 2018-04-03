@@ -45,6 +45,22 @@ class Grade implements Model {
     ]);
   }
 
+  public static function selectByStudentUsernameAndGradableName($student_username, $gradable_name) {
+    return query("SELECT `student_username`,
+      `gradable_name`,
+      `grade`,
+      `remark_status`,
+      `remark_message`,
+      `created_at`,
+      `updated_at`
+      FROM `Grade`
+      WHERE `gradable_name` = ? AND `student_username` = ?", [
+      'ss',
+      $gradable_name,
+      $student_username
+    ]);
+  }
+
   public static function insert($data) {
     $now = now();
     return query("INSERT INTO `Grade` (
@@ -85,15 +101,15 @@ class Grade implements Model {
       $stmt_values[] = $value;
     }
 
-    $types .= 's';
     $stmt_set[] = "`updated_at` = ?";
     $stmt_values[] = $now;
 
+    $types[0] = $types[0] . 'sss';
+
     $stmt_set = implode(', ', $stmt_set);
-    $types .= 'ss';
-    
+
     return query("UPDATE `Grade` SET $stmt_set WHERE `student_username` = ? AND `gradable_name` = ?", array_merge(
-      [$types],
+      $types,
       $stmt_values,
       [$student_username, $gradable_name]
     ));
