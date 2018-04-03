@@ -36,7 +36,7 @@
       <a class="page--menu--item" href="/assignments.php">
         Assignments
       </a>
-      <a class="page--menu--item" href="/exams.html">
+      <a class="page--menu--item" href="/exams.php">
         Exams
       </a>
       <a class="page--menu--item" href="https://piazza.com/class/jcpjjp5l4bywd"
