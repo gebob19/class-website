@@ -8,12 +8,15 @@ function has_page_permission($role) {
     ],
     'student' => [
       '/index.php',
+      '/logout.php',
     ],
     'ta' => [
       '/index.php',
+      '/logout.php',
     ],
     'instructor' => [
       '/index.php',
+      '/logout.php',
     ],
   ];
   return in_array($page, $role_permissions[$role]);

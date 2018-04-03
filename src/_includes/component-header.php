@@ -44,5 +44,10 @@
       target="_blank" rel="noopener">
       Markus
     </a>
+    <?php if (is_logged_in()): ?>
+      <a class="page--menu--item" href="/logout.php">
+        Logout
+      </a>
+    <?php endif; ?>
   </nav>
 <?php } ?>
