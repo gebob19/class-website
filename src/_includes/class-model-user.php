@@ -20,7 +20,7 @@ class User implements Model {
       FROM `User`
       WHERE `username` = ?", [
       's',
-      $username
+      strtolower($username),
     ]);
   }
 
@@ -53,7 +53,7 @@ class User implements Model {
       ?
     )", [
       'sssss',
-      $data->username,
+      strtolower($data->username),
       User::hashpassword($data->password),
       $data->role,
       $now,

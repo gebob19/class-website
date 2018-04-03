@@ -4,11 +4,11 @@ require_once 'config.php';
 switch ($_SERVER['REQUEST_METHOD']) {
   case 'GET':
     $page = (object) [
-      'title' => 'Login',
+      'title' => 'Student Registration',
     ];
 
     function component_content() { ?>
-      <form action="login.php" method="POST">
+      <form action="register.php" method="POST">
         <label>
           Username
           <br />
@@ -34,7 +34,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         </label>
 
         <input type="submit"
-          value="Login" />
+          value="Register" />
 
         <?php if (isset($_GET['error'])): ?>
         <p class="text-error">
@@ -43,7 +43,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         <?php endif; ?>
 
         <p>
-          <a href="/register.php">Don't have a student account?</a>
+          <a href="/login.php">Already have an account?</a>
         </p>
       </form>
       <?php
@@ -55,22 +55,23 @@ switch ($_SERVER['REQUEST_METHOD']) {
   case 'POST':
     $username = $_POST["username"];
     $password = $_POST["password"];
-    
+    $role = 'student';
+
     $user_data = User::selectByUsername($username);
-    if (count($user_data) == 0) {
-      header("Location: /login.php?error=USER_NOT_FOUND");
+    if (count($user_data) > 0) {
+      header("Location: /register.php?error=USER_EXISTS");
       die();
     }
 
-    $user = $user_data[0];
-    if (User::hashpassword($password) != $user->password) {
-      header("Location: /login.php?error=PASSWORD_INCORRECT");
-      die();
-    }
+    $user = User::insert((object) [
+      'username' => $username,
+      'password' => $password,
+      'role' => $role,
+    ]);
 
-    $_SESSION['username'] = $user->username;
-    $_SESSION['role'] = $user->role;
-    
+    $_SESSION['username'] = $username;
+    $_SESSION['role'] = $role;
+
     header("Location: /index.php");
     exit();
 }
