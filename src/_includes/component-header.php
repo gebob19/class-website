@@ -47,6 +47,11 @@
         target="_blank" rel="noopener">
         Markus
       </a>
+      <?php if (has_page_permission($_SESSION['role'], '/student-grades.php')): ?>
+        <a class="page--menu--item" href="/student-grades.php">
+          My Grades
+        </a>
+      <?php endif; ?>
       <a class="page--menu--item" href="/logout.php">
         Logout
       </a>
