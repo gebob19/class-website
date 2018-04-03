@@ -4,10 +4,14 @@ require_once 'config.php';
 switch ($_SERVER['REQUEST_METHOD']) {
   case 'GET':
     $page = (object) [
-      'title' => 'Student Registration',
+      'title' => 'Registration',
     ];
 
     function component_content() { ?>
+      <img src="/assets/utsc-logo.svg"
+        alt="University of Toronto Scaborough Logo"
+        style="display: block; margin: 30px auto 0;" />
+        
       <form action="register.php" method="POST">
         <label>
           Username
@@ -32,6 +36,27 @@ switch ($_SERVER['REQUEST_METHOD']) {
             maxlength="64"
             required />
         </label>
+        
+        <label>
+          Role
+          <br />
+          <select name="role"
+            placeholder="Role"
+            required />
+            <option value="">
+
+            </option>
+            <option value="student">
+              Student
+            </option>
+            <option value="ta">
+              TA
+            </option>
+            <option value="instructor">
+              Instructor
+            </option>
+          </select>
+        </label>
 
         <input type="submit"
           value="Register" />
@@ -55,7 +80,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
   case 'POST':
     $username = $_POST["username"];
     $password = $_POST["password"];
-    $role = 'student';
+    $role = $_POST["role"];
 
     $user_data = User::selectByUsername($username);
     if (count($user_data) > 0) {

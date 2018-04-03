@@ -44,7 +44,8 @@ label {
 }
 
 input[type="text"],
-input[type="password"] {
+input[type="password"],
+select {
   padding: 4px;
   width: 320px;
   margin: 0;
@@ -54,7 +55,8 @@ input[type="password"] {
 }
 
 input[type="text"]:valid,
-input[type="password"]:valid {
+input[type="password"]:valid,
+select:valid {
   background: #8f8;
 }
 

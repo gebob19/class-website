@@ -8,6 +8,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
     ];
 
     function component_content() { ?>
+      <img src="/assets/utsc-logo.svg"
+        alt="University of Toronto Scaborough Logo"
+        style="display: block; margin: 30px auto 0;" />
+        
       <form action="login.php" method="POST">
         <label>
           Username
@@ -38,12 +42,12 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
         <?php if (isset($_GET['error'])): ?>
         <p class="text-error">
-          <?= print_error_message($_GET['error']); ?>
+          <?= print_error_message($_GET['error']); ?> Please try again.
         </p>
         <?php endif; ?>
 
         <p>
-          <a href="/register.php">Don't have a student account?</a>
+          <a href="/register.php">Don't have an account?</a>
         </p>
       </form>
       <?php
