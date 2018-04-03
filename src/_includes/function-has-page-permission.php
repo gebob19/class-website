@@ -9,14 +9,17 @@ function has_page_permission($role) {
     'student' => [
       '/index.php',
       '/logout.php',
+      '/course-team.php',
     ],
     'ta' => [
       '/index.php',
       '/logout.php',
+      '/course-team.php',
     ],
     'instructor' => [
       '/index.php',
       '/logout.php',
+      '/course-team.php',
     ],
   ];
   return in_array($page, $role_permissions[$role]);

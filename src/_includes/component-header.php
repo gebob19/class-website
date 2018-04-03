@@ -21,7 +21,7 @@
         target="_blank">
         Syllabus
       </a>
-      <a class="page--menu--item" href="/course-team.html">
+      <a class="page--menu--item" href="/course-team.php">
         Course Team
       </a>
       <a class="page--menu--item" href="/calendar.html">
