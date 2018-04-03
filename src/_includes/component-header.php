@@ -30,7 +30,7 @@
       <a class="page--menu--item" href="/lectures.php">
         Lectures
       </a>
-      <a class="page--menu--item" href="/labs.html">
+      <a class="page--menu--item" href="/labs.php">
         Labs
       </a>
       <a class="page--menu--item" href="/assignments.html">
