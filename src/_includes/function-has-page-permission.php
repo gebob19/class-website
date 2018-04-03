@@ -8,6 +8,8 @@ function has_page_permission($role, $page=NULL) {
       '/register.php',
     ],
     'student' => [
+      '/feedback.php',
+      '/submit-feedback.php',
       '/index.php',
       '/404.php',
       '/logout.php',

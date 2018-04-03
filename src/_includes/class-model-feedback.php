@@ -4,7 +4,7 @@ Class Feedback implements Model {
     query("CREATE TABLE IF NOT EXISTS `Feedback`(
       `id` bigint auto_increment,
       `instructor_username` varchar(255) unique NOT NULL,
-      `message` varchar(100) NOT NULL,
+      `message` varchar(255) NOT NULL,
       `created_at` datetime NOT NULL,
       `updated_at` datetime NOT NULL,
       PRIMARY KEY (`id`),
