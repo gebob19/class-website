@@ -4,7 +4,7 @@ require_once 'config.php';
 switch ($_SERVER['REQUEST_METHOD']) {
   case 'GET':
     $page = (object) [
-      'title' => 'Student Grades',
+      'title' => 'My Grades',
     ];
 
     function component_content() {

@@ -4,7 +4,7 @@ require_once 'config.php';
 switch ($_SERVER['REQUEST_METHOD']) {
   case 'GET':
     $page = (object) [
-      'title' => 'Calendar',
+      'title' => '404',
     ];
 
     function component_content() { ?>

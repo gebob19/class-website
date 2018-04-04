@@ -21,6 +21,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
         </p>
       <?php endif;
 
+      if (is_logged_in() && has_page_permission($_SESSION['role'], '/instructor-grades.php')): ?>
+        <p>
+          <a href='/instructor-grades.php'>
+          Welcome instructor <?= $_SESSION['username'] ?>, click here to see all grades of your class</a>
+        </p>
+      <?php endif;
+
       $announcements = Announcement::select();
       foreach ($announcements as $announcement) {
         component_announcement($announcement);
