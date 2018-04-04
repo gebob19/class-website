@@ -31,8 +31,10 @@ function has_page_permission($role, $page=NULL) {
       '/lectures.php',
       '/labs.php',
       '/assignments.php',
+      '/class-grades.php',
       '/exams.php',
       '/remark.php',
+      '/update-grade.php',
     ],
     'instructor' => [
       '/index.php',
@@ -44,9 +46,10 @@ function has_page_permission($role, $page=NULL) {
       '/labs.php',
       '/assignments.php',
       '/exams.php',
-      '/instructor-grades.php',
+      '/class-grades.php',
       '/instructor-feedback.php',
       '/remark.php',
+      '/update-grade.php',
     ],
   ];
   return in_array($page, $role_permissions[$role]);

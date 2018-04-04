@@ -9,7 +9,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
     function component_content() {
       $grades = Grade::selectByStudentUsername($_SESSION['username']);
-      debug($grades);
       ?>
       <h3>
         Your Mark Spreadsheets
