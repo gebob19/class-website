@@ -24,7 +24,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
       if (is_logged_in() && has_page_permission($_SESSION['role'], '/class-grades.php')): ?>
         <p>
           <a href='/class-grades.php'>
-          Welcome instructor <?= $_SESSION['username'] ?>, click here to see all grades of your class</a>
+          Welcome <?=$_SESSION['role']?> <?=$_SESSION['username']?>, click here to see all grades of your class</a>
         </p>
       <?php endif;
 

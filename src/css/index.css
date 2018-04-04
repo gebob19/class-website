@@ -344,6 +344,7 @@ input[type="button"]:active {
 
 .studentgrades--table-row-cell {
   flex-grow: 1;
+  width: 0;
 }
 
 .studentgrades--table-firstrow {

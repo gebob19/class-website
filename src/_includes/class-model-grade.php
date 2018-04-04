@@ -15,16 +15,6 @@ class Grade implements Model {
     )");
   }
 
-  public static function selectRemarkStatusOptions() {
-    return [
-      'requested',
-      'not-requested',
-      'approved',
-      'remarked',
-      'declined',
-    ];
-  }
-
   public static function selectByStudentUsername($student_username) {
     return query("SELECT `student_username`,
       `gradable_name`,
@@ -71,7 +61,7 @@ class Grade implements Model {
     ]);
   }
 
-  public static function selectRemarkRequests() {
+  public static function selectRemarkRequests($status) {
     return query("SELECT `student_username`,
       `gradable_name`,
       `grade`,
@@ -82,7 +72,7 @@ class Grade implements Model {
       FROM `Grade`
       WHERE `remark_status` = ?", [
       's',
-      'requested',
+      $status,
     ]);
   }
 
