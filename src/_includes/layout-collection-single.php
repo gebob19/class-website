@@ -16,7 +16,7 @@
         <main class="page--content">
           <?php component_content(); ?>
 
-          <?php component_attachments(); ?>
+          <?php component_attachments($page->attachments); ?>
         </main>
 
         <?php component_footer(); ?>

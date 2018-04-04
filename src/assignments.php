@@ -7,11 +7,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
       'title' => 'Assignments',
       'collection' => [
         (object) [
-          'path' => '/assignments/2018-02-09-a1.html',
+          'path' => '/assignments/2018-02-09-a1.php',
           'title' => 'Assignment 1',
         ],
         (object) [
-          'path' => '/assignments/2018-03-09-a2.html',
+          'path' => '/assignments/2018-03-09-a2.php',
           'title' => 'Assignment 2',
         ],
       ],

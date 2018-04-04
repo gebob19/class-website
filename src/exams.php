@@ -7,7 +7,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
       'title' => 'Exams',
       'collection' => [
         (object) [
-          'path' => '/exams/2018-02-05-midterm.html',
+          'path' => '/exams/2018-02-05-midterm.php',
           'title' => 'Midterm Information',
         ],
       ],
