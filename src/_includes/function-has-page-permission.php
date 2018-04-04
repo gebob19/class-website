@@ -45,6 +45,7 @@ function has_page_permission($role, $page=NULL) {
       '/exams.php',
       '/instructor-grades.php',
       '/instructor-feedback.php',
+      '/instructor-remark.php',
     ],
   ];
   return in_array($page, $role_permissions[$role]);

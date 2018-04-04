@@ -61,6 +61,21 @@ class Grade implements Model {
     ]);
   }
 
+  public static function selectRemarkRequests() {
+    return query("SELECT `student_username`,
+      `gradable_name`,
+      `grade`,
+      `remark_status`,
+      `remark_message`,
+      `created_at`,
+      `updated_at`
+      FROM `Grade`
+      WHERE `remark_status` = ?", [
+      's',
+      'requested',
+    ]);
+  }
+
   public static function insert($data) {
     $now = now();
     return query("INSERT INTO `Grade` (

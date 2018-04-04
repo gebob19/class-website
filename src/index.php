@@ -31,9 +31,15 @@ switch ($_SERVER['REQUEST_METHOD']) {
       if (is_logged_in() && has_page_permission($_SESSION['role'], '/instructor-feedback.php')): ?>
         <p>
           <a href='/instructor-feedback.php'>
-          Click here</a> to View feedback
+          Click here</a> to view feedback
         </p>
       <?php endif;
+
+      if (is_logged_in() && has_page_permission($_SESSION['role'], '/instructor-remark.php')): ?>
+      <p>
+        <a href='/instructor-remark.php'>
+        Click here</a> to view all remark requests
+      </p><?php endif;
 
       $announcements = Announcement::select();
       foreach ($announcements as $announcement) {
