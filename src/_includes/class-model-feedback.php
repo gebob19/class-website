@@ -3,8 +3,8 @@ Class Feedback implements Model {
   public static function create_table() {
     query("CREATE TABLE IF NOT EXISTS `Feedback`(
       `id` bigint auto_increment,
-      `instructor_username` varchar(255) unique NOT NULL,
-      `message` varchar(255) NOT NULL,
+      `instructor_username` varchar(255) NOT NULL,
+      `message` text NOT NULL,
       `created_at` datetime NOT NULL,
       `updated_at` datetime NOT NULL,
       PRIMARY KEY (`id`),

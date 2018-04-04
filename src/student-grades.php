@@ -76,7 +76,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
         <input type="submit"
           value="Submit Remark Request" />
       </form>
-    <?php }
+    <?php
+      if (isset($_GET['success'])):?>
+        <p> Your feedback was recorded</p>
+      <?php endif;    
+    }
 
     layout_default();
     exit();

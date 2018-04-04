@@ -22,9 +22,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
       'remark_status' => 'requested',
       'remark_message' => $remark_message,
     ]);
-    echo "<script>
-    alert('success!');
-    window.location.href='./student-grades.php';
-    </script>";
+    page_redirect("/student-grades.php?success");
     exit();
 }

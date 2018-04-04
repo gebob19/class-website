@@ -15,9 +15,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
     ];
 
     Feedback::insert($feedback);
-    echo "<script>
-    alert('Thanks for the feedback!');
-    window.location.href='./feedback.php';
-    </script>";
+    page_redirect("/feedback.php?success");
     exit();
 }
