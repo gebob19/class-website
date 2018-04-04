@@ -9,10 +9,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
     function component_content() {
       $remark_requests = Grade::selectRemarkRequests();
+      $remark_status_options = Grade::selectRemarkStatusOptions();
       if (count($remark_requests) == 0) {
         echo "no remark requests";
-      } else {
-        ?>
+      } else {?>
         <div class="studentgrades--table">
           <div class="studentgrades--table-row studentgrades--table-firstrow">
             <span class="studentgrades--table-row-cell">
@@ -22,28 +22,29 @@ switch ($_SERVER['REQUEST_METHOD']) {
               Grade Name
             </span>
             <span class="studentgrades--table-row-cell">
-              Current Grade
+              Remark Message
             </span>
             <span class="studentgrades--table-row-cell">
-              Remark Message
+              Remark Status
             </span>
           </div>
           <?php
           foreach( $remark_requests as $remark_request):?>
           <div class="studentgrades--table-row">
-            <span class="studentgrades--table-row-cell">
+            <span value='student_name' class="studentgrades--table-row-cell">
               <?= $remark_request->student_username?>
             </span>
             <span class="studentgrades--table-row-cell">
               <?= $remark_request->gradable_name?>
             </span>
             <span class="studentgrades--table-row-cell">
-              <?= $remark_request->grade?>
-            </span>
-            <span class="studentgrades--table-row-cell">
               <?= $remark_request->remark_message?>
             </span>
-          </div><?php endforeach;?>
+            <span class="studentgrades--table-row-cell">
+              <?= $remark_request->remark_status?>
+            </span>
+          </div>
+          <?php endforeach?>
         <div><?php
       }
     }

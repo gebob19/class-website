@@ -35,10 +35,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
         </p>
       <?php endif;
 
-      if (is_logged_in() && has_page_permission($_SESSION['role'], '/instructor-remark.php')): ?>
+      if (is_logged_in() && has_page_permission($_SESSION['role'], '/remark.php')): ?>
       <p>
-        <a href='/instructor-remark.php'>
+        <a href='/remark.php'>
         Click here</a> to view all remark requests
+      </p><?php endif;
+      
+      if (is_logged_in() && has_page_permission($_SESSION['role'], '/enter-marks.php')): ?>
+      <p>
+        <a href='/enter-marks.php'>
+        Click here</a> to view all enter student marks
       </p><?php endif;
 
       $announcements = Announcement::select();

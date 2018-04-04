@@ -15,6 +15,16 @@ class Grade implements Model {
     )");
   }
 
+  public static function selectRemarkStatusOptions() {
+    return [
+      'requested',
+      'not-requested',
+      'approved',
+      'remarked',
+      'declined',
+    ];
+  }
+
   public static function selectByStudentUsername($student_username) {
     return query("SELECT `student_username`,
       `gradable_name`,
