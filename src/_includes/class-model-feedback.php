@@ -11,16 +11,29 @@ Class Feedback implements Model {
       FOREIGN KEY (`instructor_username`) REFERENCES User(`username`)
       )");
   }
-
-  public static function select() {
-    return query("SELECT `id`,
-      `instructor_username`,
-      `message`,
-      `created_at`,
-      `updated_at`
-      FROM `Feedback`");
-  }
-
+  
+    public static function select() {
+      return query("SELECT `id`,
+        `instructor_username`,
+        `message`,
+        `created_at`,
+        `updated_at`
+        FROM `Feedback`");
+    }
+  
+    public static function selectByInstructorUsername($username) {
+      return query("SELECT `id`,
+        `instructor_username`,
+        `message`,
+        `created_at`,
+        `updated_at`
+        FROM `Feedback`
+        WHERE  `instructor_username` = ?", [
+          's',
+          $username,
+        ]);
+    }
+  
   public static function insert($data) {
     $now = now();
     return query("INSERT INTO `Feedback` (
