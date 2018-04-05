@@ -14,6 +14,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
           'path' => '/assignments/2018-03-09-a2.php',
           'title' => 'Assignment 2',
         ],
+        (object) [
+          'path' => '/assignments/2018-03-24-a3.php',
+          'title' => 'Assignment 3',
+        ],
       ],
     ];
 

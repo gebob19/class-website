@@ -38,6 +38,22 @@ switch ($_SERVER['REQUEST_METHOD']) {
           'path' => '/labs/2018-02-26-w7.php',
           'title' => 'Lab 7',
         ],
+        (object) [
+          'path' => '/labs/2018-03-05-w8.php',
+          'title' => 'Lab 8',
+        ],
+        (object) [
+          'path' => '/labs/2018-03-12-w9.php',
+          'title' => 'Lab 9',
+        ],
+        (object) [
+          'path' => '/labs/2018-03-19-w10.php',
+          'title' => 'Lab 10',
+        ],
+        (object) [
+          'path' => '/labs/2018-03-26-w11.php',
+          'title' => 'Lab 11',
+        ],
       ],
     ];
 

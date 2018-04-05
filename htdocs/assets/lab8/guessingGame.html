@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<!-- CSCB20 Lab 8: Guessing Game -->
+<html> 
+<head>
+<title>Guess the Letter</title>
+<link rel="stylesheet" type="text/css" href="guessingGame.css">
+
+
+
+</head>
+<body>
+    <h1>Guess The Letter</h1>
+    <button id="newGame" onclick="guessGame()">Start Game!</button>
+	<p id="instructions">The goal of the game is correctly guess what letter the computer has choosen. 
+		<br> When clicked on a letter block:
+		<br> -	The block will turn red if your guessed letter precedes that of computer's	
+		<br> -	The block will turn blue if your guessed letter comes after that of the computer's in the alphabet.
+	</p>
+	<div id="letterButtons"> </div>
+	
+	<img id="meme" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/hostedimages/1427404836i/14268894.jpg">
+
+	<script src="guessingGame.js"></script>
+    </body> 
+</html>
