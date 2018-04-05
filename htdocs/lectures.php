@@ -46,6 +46,22 @@ switch ($_SERVER['REQUEST_METHOD']) {
           'path' => '/lectures/2018-02-19-lec7.php',
           'title' => 'Lecture 7',
         ],
+        (object) [
+          'path' => '/lectures/2018-02-26-lec9.php',
+          'title' => 'Lecture 9',
+        ],
+        (object) [
+          'path' => '/lectures/2018-03-05-lec10.php',
+          'title' => 'Lecture 10',
+        ],
+        (object) [
+          'path' => '/lectures/2018-03-12-lec11.php',
+          'title' => 'Lecture 11',
+        ],
+        (object) [
+          'path' => '/lectures/2018-03-19-lec12.php',
+          'title' => 'Lecture 12',
+        ],
       ],
     ];
 
