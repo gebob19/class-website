@@ -8,7 +8,10 @@
           <img class="inline-icon"
             src="/img/ic_attachment_4d4d4d_18px.svg"
             alt="">
-          <?=end(explode('/', $attachment))?>
+          <?php
+            $tmp = explode('/', $attachment);
+          ?>
+          <?=end($tmp)?>
         </a>
       </li>
     <?php endforeach; ?>
