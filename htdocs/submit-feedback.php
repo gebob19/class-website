@@ -7,7 +7,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $question_answered = $_POST['question_answered'];
     $question_answer = $_POST['question_answer'];
 
-    $feedback_message = $question_answered . ": " . $question_answer;
+    $feedback_message = "<strong>" . htmlspecialchars($question_answered) . "</strong><br><br>" . htmlspecialchars($question_answer);
 
     $feedback = (object) [
       'instructor_username' => $instructor_username,

@@ -13,7 +13,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
       foreach ($gradables as $gradable):
         $grades = $_SESSION['role'] == 'instructor'
           ? Grade::selectByGradableName($gradable->name)
-          : []; ?>
+          : [(object) [ 'student_username' => 'Classified', 'grade' => 'Classified']]; ?>
         <h4><?= $gradable->name ?></h4>
 
         <?php if (count($grades) > 0): ?>

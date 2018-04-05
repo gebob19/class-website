@@ -24,10 +24,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
           </div><?php
           foreach ($all_feedback as $feedback):?>
             <div class="studentgrades--table-row">
-                <span class="studentgrades--table-row-cell">
+                <span class="studentgrades--table-row-cell" style="padding: 5px">
                   <?= $feedback->message ?>
                 </span>
-                <span class="studentgrades--table-row-cell">
+                <span class="studentgrades--table-row-cell" style="padding: 5px">
                   <?= $feedback->created_at ?>
                 </span>
               </div>

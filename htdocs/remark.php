@@ -13,7 +13,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         Grade::selectRemarkRequests('approved')
       );
       if (count($remark_requests) == 0) {
-        echo "no remark requests";
+        echo "No remark requests.";
       } else {?>
         <div class="studentgrades--table">
           <div class="studentgrades--table-row studentgrades--table-firstrow">
@@ -21,13 +21,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
               Student
             </span>
             <span class="studentgrades--table-row-cell">
-              Grade Name
+              Gradable
             </span>
             <span class="studentgrades--table-row-cell">
-              Remark Message
+              Message
             </span>
             <span class="studentgrades--table-row-cell">
-              Remark Status
+              Status
             </span>
           </div>
           <?php
