@@ -12,7 +12,7 @@ switch($_SERVER['REQUEST_METHOD']) {
       $i = 1;
       ?>
         
-        <form action='/submit-feedback.php' method='POST'>
+        <form action="<?=BASEURL?>submit-feedback.php" method='POST'>
           <label>
           Instructor
           <select name='instructor_name' required />

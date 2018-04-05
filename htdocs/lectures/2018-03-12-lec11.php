@@ -6,13 +6,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $page = (object) [
       'title' => 'Lecture 11',
       'attachments' => [
-        '/assets/lecture/w11/config.php',
-        '/assets/lecture/w11/fetch.php',
-        '/assets/lecture/w11/helloworld.php',
-        '/assets/lecture/w11/login.php',
-        '/assets/lecture/w11/logout.php',
-        '/assets/lecture/w11/session.php',
-        '/assets/lecture/w11/welcome.php',
+        BASEURL . 'assets/lecture/w11/config.php',
+        BASEURL . 'assets/lecture/w11/fetch.php',
+        BASEURL . 'assets/lecture/w11/helloworld.php',
+        BASEURL . 'assets/lecture/w11/login.php',
+        BASEURL . 'assets/lecture/w11/logout.php',
+        BASEURL . 'assets/lecture/w11/session.php',
+        BASEURL . 'assets/lecture/w11/welcome.php',
       ],
     ];
     

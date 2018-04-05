@@ -41,7 +41,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         <?php endif; ?>
 
         <form class="classgrades--updategrade"
-          action="/update-grade.php"
+          action="<?=BASEURL?>update-grade.php"
           method="POST"
           style="padding-top: 1em;">
           <div class="classgrades--updategrade-col">

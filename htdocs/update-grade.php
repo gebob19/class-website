@@ -19,6 +19,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
         'grade' => $grade
       ]);
     }
-    header('Location: /class-grades.php');
+    header('Location: '.BASEURL.'class-grades.php');
     exit();
 }

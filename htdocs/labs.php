@@ -7,51 +7,51 @@ switch ($_SERVER['REQUEST_METHOD']) {
       'title' => 'Labs',
       'collection' => [
         (object) [
-          'path' => '/labs/2018-01-08-software-inst.php',
+          'path' => BASEURL . 'labs/2018-01-08-software-inst.php',
           'title' => 'Software Installation',
         ],
         (object) [
-          'path' => '/labs/2018-01-08-w1.php',
+          'path' => BASEURL . 'labs/2018-01-08-w1.php',
           'title' => 'Lab 1',
         ],
         (object) [
-          'path' => '/labs/2018-01-15-w2.php',
+          'path' => BASEURL . 'labs/2018-01-15-w2.php',
           'title' => 'Lab 2',
         ],
         (object) [
-          'path' => '/labs/2018-01-22-w3.php',
+          'path' => BASEURL . 'labs/2018-01-22-w3.php',
           'title' => 'Lab 3',
         ],
         (object) [
-          'path' => '/labs/2018-01-29-w4.php',
+          'path' => BASEURL . 'labs/2018-01-29-w4.php',
           'title' => 'Lab 4',
         ],
         (object) [
-          'path' => '/labs/2018-02-05-w5.php',
+          'path' => BASEURL . 'labs/2018-02-05-w5.php',
           'title' => 'Lab 5',
         ],
         (object) [
-          'path' => '/labs/2018-02-12-w6.php',
+          'path' => BASEURL . 'labs/2018-02-12-w6.php',
           'title' => 'Lab 6',
         ],
         (object) [
-          'path' => '/labs/2018-02-26-w7.php',
+          'path' => BASEURL . 'labs/2018-02-26-w7.php',
           'title' => 'Lab 7',
         ],
         (object) [
-          'path' => '/labs/2018-03-05-w8.php',
+          'path' => BASEURL . 'labs/2018-03-05-w8.php',
           'title' => 'Lab 8',
         ],
         (object) [
-          'path' => '/labs/2018-03-12-w9.php',
+          'path' => BASEURL . 'labs/2018-03-12-w9.php',
           'title' => 'Lab 9',
         ],
         (object) [
-          'path' => '/labs/2018-03-19-w10.php',
+          'path' => BASEURL . 'labs/2018-03-19-w10.php',
           'title' => 'Lab 10',
         ],
         (object) [
-          'path' => '/labs/2018-03-26-w11.php',
+          'path' => BASEURL . 'labs/2018-03-26-w11.php',
           'title' => 'Lab 11',
         ],
       ],

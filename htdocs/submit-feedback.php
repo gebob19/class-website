@@ -15,6 +15,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
     ];
 
     Feedback::insert($feedback);
-    page_redirect("/feedback.php?success");
+    page_redirect(BASEURL . "feedback.php?success");
     exit();
 }

@@ -6,7 +6,7 @@
     </div>
     <?php if (is_logged_in()): ?>
       <button id="page--header--burger">
-        <img src="/img/ic_menu_4d4d4d_24px.svg"
+        <img src="<?=BASEURL?>img/ic_menu_4d4d4d_24px.svg"
           alt="Toggle Menu Visibility"/>
       </button>
     <?php endif; ?>
@@ -14,29 +14,29 @@
 
   <?php if (is_logged_in()): ?>
     <nav id="page--menu">
-      <a class="page--menu--item" href="/index.php">
+      <a class="page--menu--item" href="<?=BASEURL?>index.php">
         Announcements
       </a>
-      <a class="page--menu--item" href="/assets/syllabus.pdf"
+      <a class="page--menu--item" href="<?=BASEURL?>assets/syllabus.pdf"
         target="_blank">
         Syllabus
       </a>
-      <a class="page--menu--item" href="/course-team.php">
+      <a class="page--menu--item" href="<?=BASEURL?>course-team.php">
         Course Team
       </a>
-      <a class="page--menu--item" href="/calendar.php">
+      <a class="page--menu--item" href="<?=BASEURL?>calendar.php">
         Calendar
       </a>
-      <a class="page--menu--item" href="/lectures.php">
+      <a class="page--menu--item" href="<?=BASEURL?>lectures.php">
         Lectures
       </a>
-      <a class="page--menu--item" href="/labs.php">
+      <a class="page--menu--item" href="<?=BASEURL?>labs.php">
         Labs
       </a>
-      <a class="page--menu--item" href="/assignments.php">
+      <a class="page--menu--item" href="<?=BASEURL?>assignments.php">
         Assignments
       </a>
-      <a class="page--menu--item" href="/exams.php">
+      <a class="page--menu--item" href="<?=BASEURL?>exams.php">
         Exams
       </a>
       <a class="page--menu--item" href="https://piazza.com/class/jcpjjp5l4bywd"
@@ -48,11 +48,11 @@
         Markus
       </a>
       <?php if (has_page_permission($_SESSION['role'], '/student-grades.php')): ?>
-        <a class="page--menu--item" href="/student-grades.php">
+        <a class="page--menu--item" href="<?=BASEURL?>student-grades.php">
           My Grades
         </a>
       <?php endif; ?>
-      <a class="page--menu--item" href="/logout.php">
+      <a class="page--menu--item" href="<?=BASEURL?>logout.php">
         Logout
       </a>
     </nav>

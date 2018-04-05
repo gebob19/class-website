@@ -13,5 +13,5 @@
     </span>
   </footer>
 
-  <script type="application/javascript" src="/js/index.js" async></script>
+  <script type="application/javascript" src="<?=BASEURL?>js/index.js" async></script>
 <?php } ?>

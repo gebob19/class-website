@@ -6,10 +6,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $page = (object) [
       'title' => 'Midterm Information',
       'attachments' => [
-        '/assets/exam/midterm-prep.pdf',
-        '/assets/exam/midterm-extraprac.pdf',
-        '/assets/exam/midterm-appen.pdf',
-        '/assets/exam/midterm-soln.pdf',
+        BASEURL . 'assets/exam/midterm-prep.pdf',
+        BASEURL . 'assets/exam/midterm-extraprac.pdf',
+        BASEURL . 'assets/exam/midterm-appen.pdf',
+        BASEURL . 'assets/exam/midterm-soln.pdf',
       ],
     ];
 

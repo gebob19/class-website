@@ -22,6 +22,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
       'remark_status' => 'requested',
       'remark_message' => $remark_message,
     ]);
-    page_redirect("/student-grades.php?success");
+    page_redirect(BASEURL . "student-grades.php?success");
     exit();
 }

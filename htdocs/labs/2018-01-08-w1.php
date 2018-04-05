@@ -6,13 +6,13 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $page = (object) [
       'title' => 'Lab 1',
       'attachments' => [
-        '/assets/lab1/lab1.pdf',
-        '/assets/lab1/file_basics.txt',
-        '/assets/lab1/lists.txt',
-        '/assets/lab1/math_str.txt',
-        '/assets/lab1/nested.txt',
-        '/assets/lab1/while.txt',
-        '/assets/lab1/data.txt',
+        BASEURL . 'assets/lab1/lab1.pdf',
+        BASEURL . 'assets/lab1/file_basics.txt',
+        BASEURL . 'assets/lab1/lists.txt',
+        BASEURL . 'assets/lab1/math_str.txt',
+        BASEURL . 'assets/lab1/nested.txt',
+        BASEURL . 'assets/lab1/while.txt',
+        BASEURL . 'assets/lab1/data.txt',
       ],
     ];
 

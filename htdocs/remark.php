@@ -44,7 +44,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             </span>
             <span class="studentgrades--table-row-cell">
               <?=$remark_request->remark_status?>
-              <form action="/remark.php"
+              <form action="<?=BASEURL?>remark.php"
                 method="POST"
                 style="width: auto; padding: 0;">
                 <input type="text"
@@ -93,6 +93,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
     Grade::updateByStudentUsernameAndGradableName($student_username, $gradable_name, ['s'], (object)[
       'remark_status' => $remark_status,
     ]);
-    header("Location: /remark.php");
+    header("Location: ".BASEURL."remark.php");
     exit();
 }

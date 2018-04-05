@@ -6,11 +6,11 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $page = (object) [
       'title' => 'Lab 8',
       'attachments' => [
-        '/assets/lab8/guessingGame.css',
-        '/assets/lab8/guessingGame.js',
-        '/assets/lab8/guessingGame.html',
-        '/assets/lab8/guessingGameSolution.js',
-        '/assets/lab8/lab8.pdf',
+        BASEURL . 'assets/lab8/guessingGame.css',
+        BASEURL . 'assets/lab8/guessingGame.js',
+        BASEURL . 'assets/lab8/guessingGame.html',
+        BASEURL . 'assets/lab8/guessingGameSolution.js',
+        BASEURL . 'assets/lab8/lab8.pdf',
       ],
     ];
     

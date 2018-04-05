@@ -37,7 +37,7 @@ Attachment::create_table();
 session_start();
 
 if (is_logged_in() && !has_page_permission($_SESSION['role'])) {
-  page_redirect("/index.php") && die();
+  page_redirect(BASEURL . "index.php") && die();
 } else if (!is_logged_in() && !has_page_permission('_public')) {
-  page_redirect("/login.php") && die();
+  page_redirect(BASEURL . "login.php") && die();
 }

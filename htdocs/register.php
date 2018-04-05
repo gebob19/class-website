@@ -8,7 +8,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     ];
 
     function component_content() { ?>
-      <img src="/assets/utsc-logo.svg"
+      <img src="<?=BASEURL?>assets/utsc-logo.svg"
         alt="University of Toronto Scaborough Logo"
         style="display: block; margin: 30px auto 0;" />
         
@@ -68,7 +68,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         <?php endif; ?>
 
         <p>
-          <a href="/login.php">Already have an account?</a>
+          <a href="<?=BASEURL?>login.php">Already have an account?</a>
         </p>
       </form>
       <?php
@@ -84,7 +84,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
 
     $user_data = User::selectByUsername($username);
     if (count($user_data) > 0) {
-      header("Location: /register.php?error=USER_EXISTS");
+      header("Location: ".BASEURL."register.php?error=USER_EXISTS");
       die();
     }
 
@@ -97,6 +97,6 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $_SESSION['username'] = $username;
     $_SESSION['role'] = $role;
 
-    header("Location: /index.php");
+    header("Location: ".BASEURL."index.php");
     exit();
 }

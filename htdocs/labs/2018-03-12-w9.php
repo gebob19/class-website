@@ -6,7 +6,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $page = (object) [
       'title' => 'Lab 9',
       'attachments' => [
-        '/assets/lab9/Let’s get some PHP.pdf',
+        BASEURL . 'assets/lab9/Let’s get some PHP.pdf',
       ],
     ];
     

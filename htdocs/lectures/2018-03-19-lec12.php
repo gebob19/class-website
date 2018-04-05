@@ -6,10 +6,10 @@ switch ($_SERVER['REQUEST_METHOD']) {
     $page = (object) [
       'title' => 'Lecture 12',
       'attachments' => [
-        '/assets/lecture/w11/getexample.html',
-        '/assets/lecture/w11/httpgetRequest.php',
-        '/assets/lecture/w11/populate.php',
-        '/assets/lecture/w11/php_mysql.ppt',
+        BASEURL . 'assets/lecture/w11/getexample.html',
+        BASEURL . 'assets/lecture/w11/httpgetRequest.php',
+        BASEURL . 'assets/lecture/w11/populate.php',
+        BASEURL . 'assets/lecture/w11/php_mysql.ppt',
       ],
     ];
     

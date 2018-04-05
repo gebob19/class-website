@@ -8,7 +8,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
     ];
 
     function component_content() { ?>
-      <img src="/assets/utsc-logo.svg"
+      <img src="<?=BASEURL?>assets/utsc-logo.svg"
         alt="University of Toronto Scaborough Logo"
         style="display: block; margin: 30px auto 0;" />
         
@@ -47,7 +47,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         <?php endif; ?>
 
         <p>
-          <a href="/register.php">Don't have an account?</a>
+          <a href="<?=BASEURL?>register.php">Don't have an account?</a>
         </p>
       </form>
       <?php
@@ -62,19 +62,19 @@ switch ($_SERVER['REQUEST_METHOD']) {
     
     $user_data = User::selectByUsername($username);
     if (count($user_data) == 0) {
-      header("Location: /login.php?error=USER_NOT_FOUND");
+      header("Location: ".BASEURL."login.php?error=USER_NOT_FOUND");
       die();
     }
 
     $user = $user_data[0];
     if (User::hashpassword($password) != $user->password) {
-      header("Location: /login.php?error=PASSWORD_INCORRECT");
+      header("Location: ".BASEURL."login.php?error=PASSWORD_INCORRECT");
       die();
     }
 
     $_SESSION['username'] = $user->username;
     $_SESSION['role'] = $user->role;
     
-    header("Location: /index.php");
+    header("Location: ".BASEURL."index.php");
     exit();
 }

@@ -45,7 +45,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
         Remark Requests
       </h3>
 
-      <form action="/student-remark.php" method="POST" style="padding: 0">
+      <form action="<?=BASEURL?>student-remark.php" method="POST" style="padding: 0">
         <label>
           Grade
           <br />

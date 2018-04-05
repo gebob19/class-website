@@ -85,7 +85,7 @@ debug('Announcement::selectById', Announcement::selectById(1));
 
 try {
   debug('Page::insert', Page::insert((object) [
-    'path' => '/a1',
+    'path' => BASEURL . 'a1',
     'title' => 'Assignment 1',
     'content' => 'Please dont forget to submit your src folder',
   ]));
@@ -94,7 +94,7 @@ try {
 }
 try {
   debug('Page::insert', Page::insert((object) [
-    'path' => '/a2',
+    'path' => BASEURL . 'a2',
     'title' => 'Assignment 2',
     'content' => 'Please dont forget to submit your src folder',
   ]));
@@ -102,22 +102,22 @@ try {
   debug('Page::insert', $err->getMessage());
 }
 debug('Page::select', Page::select());
-debug('Page::updateByPath', Page::updateByPath('/a1', 's', (object) [
+debug('Page::updateByPath', Page::updateByPath(BASEURL.'a1', 's', (object) [
   'content' => 'Due date is 5pm on Sunday.',
 ]));
-debug('Page::selectByPath', Page::selectByPath('/a1'));
-debug('Page::deleteByPath', Page::deleteByPath('/a1'));
+debug('Page::selectByPath', Page::selectByPath(BASEURL.'a1'));
+debug('Page::deleteByPath', Page::deleteByPath(BASEURL.'a1'));
 try {
   debug('Attachment::insert', Attachment::insert((object) [
-    'page_path' => '/a2',
-    'url' => '/assets/a2/a2.pdf',
+    'page_path' => BASEURL . 'a2',
+    'url' => BASEURL . 'assets/a2/a2.pdf',
   ]));
 } catch (DatabaseException $err) {
   debug('Attachment::insert', $err->getMessage());
 }
 debug('Attachment::updateByPagePathAndUrl',
-  Attachment::updateByPagePathAndUrl('/a2', '/assets/a2/a2.pdf', 's', (object) [
-    'url' => '/assets/a2/a2-new.pdf',
+  Attachment::updateByPagePathAndUrl(BASEURL.'a2', BASEURL.'assets/a2/a2.pdf', 's', (object) [
+    'url' => BASEURL . 'assets/a2/a2-new.pdf',
   ]));
-debug('Attachment::selectByPagePath', Attachment::selectByPagePath('/a2'));
-debug('Attachment::deleteByPagePathAndUrl', Attachment::deleteByPagePathAndUrl('/a2', '/assets/a2/a2-new.pdf'));
+debug('Attachment::selectByPagePath', Attachment::selectByPagePath(BASEURL.'a2'));
+debug('Attachment::deleteByPagePathAndUrl', Attachment::deleteByPagePathAndUrl(BASEURL.'a2', BASEURL.'assets/a2/a2-new.pdf'));
